@@ -1,58 +1,86 @@
 <?php
-// process_order.php
+// process_order.php - ФИНАЛЬНАЯ ВЕРСИЯ ДЛЯ PHP 5.6
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-session_start(); // Добавляем старт сессии
-include '../my-account/blocks/connect.php';
+header('Content-Type: text/plain; charset=utf-8');
 
-// Простая проверка подключения
-if (!$mysql) {
-    die("Ошибка подключения к базе данных");
+// Старт сессии
+if (session_id() == '') {
+    session_start();
 }
 
-// Получение данных из формы
-$first_name = $mysql->real_escape_string($_POST['first_name'] ?? '');
-$last_name = $mysql->real_escape_string($_POST['last_name'] ?? '');
-$email = $mysql->real_escape_string($_POST['email'] ?? '');
-$phone = $mysql->real_escape_string($_POST['phone'] ?? '');
-$country = $mysql->real_escape_string($_POST['country'] ?? 'RU');
-$city = $mysql->real_escape_string($_POST['city'] ?? '');
-$address_1 = $mysql->real_escape_string($_POST['address_1'] ?? '');
-$address_2 = $mysql->real_escape_string($_POST['address_2'] ?? '');
-$postcode = $mysql->real_escape_string($_POST['postcode'] ?? '');
+// Проверяем метод
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo "Неверный метод запроса";
+    exit();
+}
 
-// Текущие даты
-$date_created = date('Y-m-d H:i:s');
-$date_created_gmt = gmdate('Y-m-d H:i:s');
+// Проверяем обязательные поля
+$required = array('first_name', 'last_name', 'email', 'phone', 'city', 'address_1', 'postcode');
+foreach ($required as $field) {
+    if (empty($_POST[$field])) {
+        echo "Заполните поле: " . $field;
+        exit();
+    }
+}
 
-// Получаем данные из сессии корзины
+// Подключение к БД
+require '../my-account/blocks/connect.php';
+
+// Проверяем корзину
+if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+    echo "Корзина пуста";
+    $mysql->close();
+    exit();
+}
+
+// Получаем данные
+$first_name = $mysql->real_escape_string($_POST['first_name']);
+$last_name = $mysql->real_escape_string($_POST['last_name']);
+$email = $mysql->real_escape_string($_POST['email']);
+$phone = $mysql->real_escape_string($_POST['phone']);
+$country = $mysql->real_escape_string(isset($_POST['country']) ? $_POST['country'] : 'RU');
+$city = $mysql->real_escape_string($_POST['city']);
+$address_1 = $mysql->real_escape_string($_POST['address_1']);
+$address_2 = $mysql->real_escape_string(isset($_POST['address_2']) ? $_POST['address_2'] : '');
+$postcode = $mysql->real_escape_string($_POST['postcode']);
+
+// Валидация email
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "Некорректный email";
+    $mysql->close();
+    exit();
+}
+
+// Формируем данные заказа из корзины
 $name_order = '';
 $total_sales = 0;
 $num_items_sold = 0;
 
-if (!empty($_SESSION['cart'])) {
-    // Формируем название заказа (список товаров)
-    $product_names = [];
-    foreach ($_SESSION['cart'] as $id => $item) {
-        $product_names[] = htmlspecialchars($item['name']);
-        $num_items_sold += $item['quantity'];
-        $total_sales += $item['price'] * $item['quantity'];
-    }
-    $name_order = $mysql->real_escape_string(implode(', ', $product_names));
+foreach ($_SESSION['cart'] as $item) {
+    $name_order .= $item['name'] . ', ';
+    $num_items_sold += $item['quantity'];
+    $total_sales += $item['price'] * $item['quantity'];
 }
 
-// Вставка в ht_wc_order_stats
+$name_order = rtrim($name_order, ', ');
+if (strlen($name_order) > 500) {
+    $name_order = substr($name_order, 0, 497) . '...';
+}
+$name_order = $mysql->real_escape_string($name_order);
+
+// Вставляем заказ
 $sql_stats = "INSERT INTO ht_order_stats
     (name_order, parent_id, date_created, date_created_gmt, num_items_sold,
      total_sales, tax_total, shipping_total, net_total, returning_customer, status, customer_id)
     VALUES (
         '$name_order',
         0,
-        '$date_created',
-        '$date_created_gmt',
-        '$num_items_sold',
-        '$total_sales',
+        NOW(),
+        UTC_TIMESTAMP(),
+        $num_items_sold,
+        $total_sales,
         0,
         0,
         0,
@@ -64,7 +92,7 @@ $sql_stats = "INSERT INTO ht_order_stats
 if ($mysql->query($sql_stats)) {
     $order_id = $mysql->insert_id;
 
-    // Вставка в ht_wc_order_addresses
+    // Вставляем адрес
     $sql_address = "INSERT INTO ht_order_addresses
         (order_id, address_type, first_name, last_name, company,
          address_1, address_2, city, state, postcode, country, email, phone)
@@ -85,9 +113,9 @@ if ($mysql->query($sql_stats)) {
         )";
 
     if ($mysql->query($sql_address)) {
-        echo "Заказ успешно оформлен! ID заказа: " . $order_id . " С вами в ближайшее время свяжется менеджер.";
-        // Очищаем корзину после успешного оформления
+        // УСПЕХ - очищаем корзину
         unset($_SESSION['cart']);
+        echo "Заказ успешно оформлен! Номер заказа: $order_id. С вами в ближайшее время свяжется менеджер.";
     } else {
         echo "Ошибка при сохранении адреса: " . $mysql->error;
     }

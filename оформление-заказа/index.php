@@ -576,7 +576,7 @@ require_once '../shop/configDB.php'; // Подключаем БД если ну�
 			<li><a href="/feed/">&#1051;&#1077;&#1085;&#1090;&#1072; &#1079;&#1072;&#1087;&#1080;&#1089;&#1077;&#1081;</a></li>
 			<li><a href="/comments/feed/">&#1051;&#1077;&#1085;&#1090;&#1072; &#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1077;&#1074;</a></li>
 
-			
+
 		</ul>
 
 		</aside><aside id="woocommerce_widget_cart-3" class="widget woocommerce widget_shopping_cart"><h3 class="widget-title">&#1050;&#1086;&#1088;&#1079;&#1080;&#1085;&#1072;</h3><div class="widget_shopping_cart_content"></div></aside></div><!-- #secondary -->
