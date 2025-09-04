@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Чат с поддержкой — Student IT Community</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="site-branding">
+                    <p class="site-title"><a href="/" rel="home">Student IT Community</a></p>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/news/">Новости</a></li>
+                        <li><a href="/shop/">Магазин</a></li>
+                        <li><a href="/a5213-contact/">Контакты</a></li>
+                        <li><a href="/%d0%be-%d1%81%d0%be%d0%be%d0%b1%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b5/">О сообществе</a></li>
+                        <li><a href="/my-account/">Мой аккаунт</a></li>
+                        <li><a href="/cart/">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+
+  <main class="container">
+		<header class="entry-header">
+			<h1 class="page-title">Чат с поддержкой</h1>
+		</header>
+		<div class="main-content">
+
+			<div class="entry-content">
+				<p>Если у вас появились какие-либо вопросы мы всегда рады вам помочь и решить появившуюся у вас проблему. </p>
+
+
+				<div id="flask-chat-container">
+				    <h3>Чат сообщества</h3>
+				    <div id="chat-window">
+				        <div id="chat-messages"></div>
+				    </div>
+				    <div id="chat-controls">
+				        <input type="text" id="message-input" placeholder="Напишите сообщение..." autocomplete="off">
+				        <button id="send-btn">
+				            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				                <line x1="22" y1="2" x2="11" y2="13"></line>
+				                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+				            </svg>
+				        </button>
+				    </div>
+				</div>
+
+				<style>
+				#flask-chat-container {
+				    max-width: 800px;
+				    margin: 20px auto;
+				    font-family: Arial, sans-serif;
+				    border: 1px solid #ddd;
+				    border-radius: 8px;
+				    padding: 15px;
+				    text-align: center;
+				}
+				#chat-messages {
+				    height: 500px;
+				    overflow-y: auto;
+				    margin-bottom: 10px;
+				    padding: 10px;
+				    background: #f9f9f9;
+				    border-radius: 5px;
+				}
+				.message {
+				    margin-bottom: 10px;
+				    padding: 8px 12px;
+				    border-radius: 5px;
+				    max-width: 80%;
+				}
+				.received {
+				    background: white;
+				    border: 1px solid #eee;
+				}
+				.sent {
+				    background: #40B198;
+				    color: white;
+				    margin-left: auto;
+				}
+				#message-input {
+				    width: 70%;
+				    padding: 8px;
+				    border: 1px solid #ddd;
+				    border-radius: 4px;
+				    margin: 10px auto;
+				}
+				#send-btn {
+				    width: 25%;
+				    padding: 8px;
+				    background: #40B198;
+				    color: white;
+				    border: none;
+				    border-radius: 15px;
+				    cursor: pointer;
+				}
+				</style>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+				<script>
+				// Функция для получения логина пользователя из куки 'user'
+				function getUserFromCookie() {
+				    const cookies = document.cookie.split(';');
+
+				    for (const cookie of cookies) {
+				        const [name, value] = cookie.trim().split('=');
+				        if (name === 'user') {
+				            const userLogin = decodeURIComponent(value);
+				            return {
+				                id: userLogin,
+				                name: userLogin // Используем логин как имя пользователя
+				            };
+				        }
+				    }
+
+				    // Если куки 'user' нет, создаем гостя
+				    const guestId = 'guest_' + Math.random().toString(36).slice(2, 9);
+				    return {
+				        id: guestId,
+				        name: 'Гость'
+				    };
+				}
+
+				// Инициализация чата
+				function initChat() {
+				    const currentUser = getUserFromCookie();
+				    console.log('Пользователь чата:', currentUser);
+
+				    // Подключаемся к Flask-SocketIO серверу
+				    const socket = io('http://localhost:5000');
+
+				    const chat = document.getElementById('chat-messages');
+				    const input = document.getElementById('message-input');
+				    const btn = document.getElementById('send-btn');
+
+				    // Обработчики событий SocketIO
+				    socket.on('connect', () => {
+				        console.log('Подключено к чату как', currentUser.name);
+				    });
+
+				    socket.on('message_history', (data) => {
+				        chat.innerHTML = ''; // Очищаем перед загрузкой истории
+				        data.messages.forEach(msg => {
+				            addMessage(msg, msg.user_id === currentUser.id ? 'sent' : 'received');
+				        });
+				        scrollToBottom();
+				    });
+
+				    socket.on('new_message', (msg) => {
+				        addMessage(msg, msg.user_id === currentUser.id ? 'sent' : 'received');
+				        scrollToBottom();
+				    });
+
+				    // Функция отправки сообщения
+				    function sendMessage() {
+				        const text = input.value.trim();
+				        if (text) {
+				            socket.emit('send_message', {
+				                text: text,
+				                sender_name: currentUser.name,
+				                user_id: currentUser.id
+				            });
+				            input.value = '';
+				        }
+				    }
+
+				    // Функция добавления сообщения в чат
+				    function addMessage(msg, type) {
+				        const div = document.createElement('div');
+				        div.className = `message ${type}`;
+				        div.innerHTML = `
+				            <strong>${msg.sender}</strong><br>
+				            ${msg.text}<br>
+				            <small>${msg.time}</small>
+				        `;
+				        chat.appendChild(div);
+				    }
+
+				    // Прокрутка вниз
+				    function scrollToBottom() {
+				        chat.scrollTop = chat.scrollHeight;
+				    }
+
+				    // Обработчики событий
+				    btn.addEventListener('click', sendMessage);
+				    input.addEventListener('keypress', (e) => {
+				        if (e.key === 'Enter') sendMessage();
+				    });
+
+				    // Фокусируемся на поле ввода
+				    input.focus();
+				}
+
+				// Запускаем чат после загрузки страницы
+				document.addEventListener('DOMContentLoaded', initChat);
+				</script>
+
+
+
+
+
+			</div><!-- entry-content -->
+
+		</div>
+
+
+								<!-- Боковая панель -->
+								<aside class="sidebar">
+										<div class="widget">
+												<form role="search" method="get" class="search-form" action="/">
+														<label>
+																<span class="screen-reader-text">Найти:</span>
+																<input type="search" class="search-field" placeholder="Поиск…" value="" name="s">
+														</label>
+														<input type="submit" class="search-submit" value="Поиск">
+												</form>
+										</div>
+
+										<div class="widget">
+												<h3 class="widget-title">Свежие записи</h3>
+												<ul class="widget-list">
+														<li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+														<li><a href="/%d0%bd%d0%be%d0%b2%d0%b0%d1%8f-%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8%d1%8f-vr-ar-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%b0-%d0%b2-%d0%ba%d0%b0%d0%bc%d0%bf%d1%83%d1%81%d0%b5/">Новая лаборатория VR/AR открыта в кампусе</a></li>
+														<li><a href="/%d0%be%d0%bf%d1%80%d0%be%d1%81-%d0%ba%d0%b0%d0%ba%d0%b8%d0%b5-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8-%d0%b2%d0%b0%d0%bc-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%b5%d1%81%d0%bd%d1%8b/" aria-current="page">Опрос: какие технологии вам интересны?</a></li>
+												</ul>
+										</div>
+
+										<div class="widget">
+												<h3 class="widget-title">Архивы</h3>
+												<ul class="widget-list">
+														<li><a href="/2025/01/">Январь 2025</a></li>
+														<li><a href="/2019/07/">Июль 2019</a></li>
+												</ul>
+										</div>
+								</aside>
+								</main>
+
+								<!-- Подвал сайта -->
+								<footer class="site-footer">
+								<div class="container">
+										<div class="footer-content">
+												<div class="footer-section">
+														<h3 class="footer-title">О нас!</h3>
+														<ul class="footer-links">
+																<li><a href="/a5213-contact/">Контакты</a></li>
+																<li><a href="#">Версия сайта для слабовидящих</a></li>
+														</ul>
+												</div>
+
+												<div class="footer-section">
+														<h3 class="footer-title">Последние новости</h3>
+														<ul class="footer-links">
+																<li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+																<li><a href="/%d0%bd%d0%be%d0%b2%d0%b0%d1%8f-%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8%d1%8f-vr-ar-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%b0-%d0%b2-%d0%ba%d0%b0%d0%bc%d0%bf%d1%83%d1%81%d0%b5/">Новая лаборатория VR/AR открыта в кампусе</a></li>
+														</ul>
+												</div>
+
+												<div class="footer-section">
+														<h3 class="footer-title">Свежие записи</h3>
+														<ul class="footer-links">
+																<li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b9%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+														</ul>
+												</div>
+										</div>
+
+										<div class="copyright">
+												<p>&copy; 2025 Student IT Community Юманова Мария Андреевна.</p>
+										</div>
+								</div>
+								</footer>
+							</body>
+							</html>

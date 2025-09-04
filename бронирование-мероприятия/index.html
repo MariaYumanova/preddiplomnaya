@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Бронирование мероприятия — Student IT Community</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="site-branding">
+                    <p class="site-title"><a href="/" rel="home">Student IT Community</a></p>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/news/">Новости</a></li>
+                        <li><a href="/shop/">Магазин</a></li>
+                        <li><a href="/a5213-contact/">Контакты</a></li>
+                        <li><a href="/%d0%be-%d1%81%d0%be%d0%be%d0%b1%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b5/">О сообществе</a></li>
+                        <li><a href="/my-account/">Мой аккаунт</a></li>
+                        <li><a href="/cart/">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+
+  <main class="container">
+		<header class="entry-header">
+			<h1 class="page-title">Бронирование мероприятия</h1>
+		</header>
+		<div class="main-content">
+
+			<div class="entry-content">
+
+
+
+				<div id="booking-system">
+	<h2>Система бронирования времени</h2>
+	<div id="calendar"></div>
+	<div id="booking-form" style="display:none;">
+			<h3>Вы бронируете: <span id="selected-slot"></span></h3>
+			<p>Забронировано: <span id="current-booking-count">0</span>/<span id="max-booking-count">5</span></p>
+			<div id="booked-users" style="margin-bottom: 10px;"></div>
+			<button id="confirm-booking" class="booking-button">Подтвердить бронь</button>
+			<button id="cancel-booking" class="booking-button cancel" style="display:none;">Отменить бронь</button>
+	</div>
+	<div id="booking-status"></div>
+</div>
+
+<style>
+	#booking-system {
+			max-width: 800px;
+			margin: 20px auto;
+			font-family: Arial, sans-serif;
+	}
+
+	.day-column {
+			display: inline-block;
+			width: 14%;
+			vertical-align: top;
+			border: 1px solid #ddd;
+			padding: 10px;
+			margin: 5px;
+			border-radius: 5px;
+	}
+
+	.time-slot {
+			position: relative;
+			padding: 8px;
+			margin: 5px 0;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.2s;
+	}
+
+	.available {
+			background: #e8f5e9;
+			border: 1px solid #a5d6a7;
+	}
+
+	.available:hover {
+			background: #c8e6c9;
+	}
+
+	.booked {
+			background: #ffebee;
+			border: 1px solid #ef9a9a;
+	}
+
+	.my-booking {
+			background: #bbdefb;
+			border: 1px solid #64b5f6;
+	}
+
+	.booking-count {
+			position: absolute;
+			top: -8px;
+			right: -8px;
+			background: #2196F3;
+			color: white;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+	}
+
+	.booking-button {
+			background: #40B198;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-right: 10px;
+	}
+
+	.booking-button.cancel {
+			background: #f44336;
+	}
+
+	.booking-button:hover {
+			background: #233452;
+			color: white;
+			opacity: 0.9;
+	}
+
+	#booked-users {
+			font-size: 14px;
+			color: #555;
+	}
+
+	#booking-status {
+			margin-top: 20px;
+			padding: 10px;
+			border-radius: 4px;
+	}
+
+	.success-message {
+			color: #2e7d32;
+			background: #e8f5e9;
+	}
+
+	.error-message {
+			color: #c62828;
+			background: #ffebee;
+	}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+<script>
+	// Конфигурация
+	const MAX_BOOKINGS_PER_SLOT = 5;
+
+	// Данные пользователя
+	const currentUser = {
+			id: window.wp_user_object?.ID || 'guest_' + Math.random().toString(36).substr(2, 8),
+			name: window.wp_user_object?.display_name || 'Гость'
+	};
+
+	let selectedDate = '';
+	let selectedSlot = '';
+	let hasExistingBooking = false;
+
+	// Подключение к серверу
+	const socket = io('http://localhost:5000');
+
+	// Инициализация календаря
+	function initCalendar(slotsData) {
+			const calendar = document.getElementById('calendar');
+			calendar.innerHTML = '';
+
+			// Сортируем даты по возрастанию
+			const sortedDates = Object.keys(slotsData).sort();
+
+			for (const date of sortedDates) {
+					const slots = slotsData[date];
+					const dayColumn = document.createElement('div');
+					dayColumn.className = 'day-column';
+
+					// Заголовок с датой
+					const dateHeader = document.createElement('h3');
+					dateHeader.textContent = new Date(date).toLocaleDateString('ru-RU', {
+							weekday: 'short',
+							month: 'short',
+							day: 'numeric'
+					});
+					dayColumn.appendChild(dateHeader);
+
+					// Сортируем временные слоты
+					const sortedTimes = Object.keys(slots).sort();
+
+					for (const time of sortedTimes) {
+							const bookings = slots[time];
+							const slotElement = document.createElement('div');
+
+							// Проверяем, есть ли уже бронь текущего пользователя
+							const userBooking = bookings.find(b => b.user_id === currentUser.id);
+							const isBooked = bookings.length >= MAX_BOOKINGS_PER_SLOT;
+
+							// Определяем классы для слота
+							let slotClass = 'time-slot ';
+							if (userBooking) {
+									slotClass += 'my-booking';
+							} else if (isBooked) {
+									slotClass += 'booked';
+							} else {
+									slotClass += 'available';
+							}
+
+							slotElement.className = slotClass;
+							slotElement.textContent = time;
+
+							// Добавляем счетчик броней
+							if (bookings.length > 0) {
+									const countBadge = document.createElement('div');
+									countBadge.className = 'booking-count';
+									countBadge.textContent = bookings.length;
+									slotElement.appendChild(countBadge);
+							}
+
+							// Добавляем подсказку с именами
+							if (bookings.length > 0) {
+									const names = bookings.map(b => b.user_name).join(', ');
+									slotElement.title = `Забронировали: ${names}`;
+							}
+
+							// Обработчик клика
+							if (!isBooked || userBooking) {
+									slotElement.addEventListener('click', () => selectSlot(date, time, !!userBooking));
+							}
+
+							dayColumn.appendChild(slotElement);
+					}
+
+					calendar.appendChild(dayColumn);
+			}
+	}
+
+	// Выбор слота
+	function selectSlot(date, time, isUserBooking) {
+			selectedDate = date;
+			selectedSlot = time;
+			hasExistingBooking = isUserBooking;
+
+			// Обновляем информацию о слоте
+			document.getElementById('selected-slot').textContent =
+					`${new Date(date).toLocaleDateString('ru-RU')} в ${time}`;
+
+			// Получаем текущие брони
+			const currentBookings = bookings[date][time] || [];
+			const currentCount = currentBookings.length;
+
+			// Обновляем счетчики
+			document.getElementById('current-booking-count').textContent = currentCount;
+			document.getElementById('max-booking-count').textContent = MAX_BOOKINGS_PER_SLOT;
+
+			// Показываем список забронировавших
+			const bookedUsersEl = document.getElementById('booked-users');
+			if (currentCount > 0) {
+					bookedUsersEl.innerHTML = '<strong>Забронировали:</strong> ' +
+							currentBookings.map(b => b.user_name).join(', ');
+			} else {
+					bookedUsersEl.innerHTML = '';
+			}
+
+			// Настраиваем кнопки
+			document.getElementById('confirm-booking').style.display =
+					isUserBooking ? 'none' : 'inline-block';
+			document.getElementById('cancel-booking').style.display =
+					isUserBooking ? 'inline-block' : 'none';
+
+			// Показываем форму
+			document.getElementById('booking-form').style.display = 'block';
+	}
+
+	// Подтверждение брони
+	document.getElementById('confirm-booking').addEventListener('click', () => {
+			socket.emit('book_slot', {
+					date: selectedDate,
+					slot: selectedSlot,
+					user_id: currentUser.id,
+					user_name: currentUser.name
+			});
+	});
+
+	// Отмена брони
+	document.getElementById('cancel-booking').addEventListener('click', () => {
+			socket.emit('cancel_booking', {
+					date: selectedDate,
+					slot: selectedSlot,
+					user_id: currentUser.id
+			});
+	});
+
+	// Обработчики событий WebSocket
+	socket.on('connect', () => {
+			console.log('Connected to booking system');
+	});
+
+	socket.on('slots_update', (slotsData) => {
+			bookings = slotsData;
+			initCalendar(slotsData);
+	});
+
+	socket.on('booking_success', (data) => {
+			document.getElementById('booking-form').style.display = 'none';
+			showStatus(`Успешно забронировано: ${data.date} ${data.slot}`, true);
+	});
+
+	socket.on('booking_error', (data) => {
+			showStatus(`Ошибка: ${data.message}`, false);
+	});
+
+	socket.on('cancel_success', () => {
+			document.getElementById('booking-form').style.display = 'none';
+			showStatus('Бронирование успешно отменено', true);
+	});
+
+	socket.on('cancel_error', (data) => {
+			showStatus(`Ошибка при отмене: ${data.message}`, false);
+	});
+
+	// Показать статус
+	function showStatus(message, isSuccess) {
+			const statusEl = document.getElementById('booking-status');
+			statusEl.textContent = message;
+			statusEl.className = isSuccess ? 'success-message' : 'error-message';
+
+			// Автоматически скрываем сообщение через 5 секунд
+			setTimeout(() => {
+					statusEl.textContent = '';
+					statusEl.className = '';
+			}, 5000);
+	}
+
+	// Инициализация при загрузке страницы
+	document.addEventListener('DOMContentLoaded', () => {
+			// Можно добавить индикатор загрузки
+	});
+</script>
+
+
+
+
+			</div><!-- entry-content -->
+
+		</div>
+
+
+								<!-- Боковая панель -->
+								<aside class="sidebar">
+										<div class="widget">
+												<form role="search" method="get" class="search-form" action="/">
+														<label>
+																<span class="screen-reader-text">Найти:</span>
+																<input type="search" class="search-field" placeholder="Поиск…" value="" name="s">
+														</label>
+														<input type="submit" class="search-submit" value="Поиск">
+												</form>
+										</div>
+
+										<div class="widget">
+												<h3 class="widget-title">Свежие записи</h3>
+												<ul class="widget-list">
+														<li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+														<li><a href="/%d0%bd%d0%be%d0%b2%d0%b0%d1%8f-%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8%d1%8f-vr-ar-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%b0-%d0%b2-%d0%ba%d0%b0%d0%bc%d0%bf%d1%83%d1%81%d0%b5/">Новая лаборатория VR/AR открыта в кампусе</a></li>
+														<li><a href="/%d0%be%d0%bf%d1%80%d0%be%d1%81-%d0%ba%d0%b0%d0%ba%d0%b8%d0%b5-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8-%d0%b2%d0%b0%d0%bc-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%b5%d1%81%d0%bd%d1%8b/" aria-current="page">Опрос: какие технологии вам интересны?</a></li>
+												</ul>
+										</div>
+
+										<div class="widget">
+												<h3 class="widget-title">Архивы</h3>
+												<ul class="widget-list">
+														<li><a href="/2025/01/">Январь 2025</a></li>
+														<li><a href="/2019/07/">Июль 2019</a></li>
+												</ul>
+										</div>
+								</aside>
+								</main>
+
+								<!-- Подвал сайта -->
+								<footer class="site-footer">
+								<div class="container">
+										<div class="footer-content">
+												<div class="footer-section">
+														<h3 class="footer-title">О нас!</h3>
+														<ul class="footer-links">
+																<li><a href="/a5213-contact/">Контакты</a></li>
+																<li><a href="#">Версия сайта для слабовидящих</a></li>
+														</ul>
+												</div>
+
+												<div class="footer-section">
+														<h3 class="footer-title">Последние новости</h3>
+														<ul class="footer-links">
+																<li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+																<li><a href="/%d0%bd%d0%be%d0%b2%d0%b0%d1%8f-%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8%d1%8f-vr-ar-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%b0-%d0%b2-%d0%ba%d0%b0%d0%bc%d0%bf%d1%83%d1%81%d0%b5/">Новая лаборатория VR/AR открыта в кампусе</a></li>
+														</ul>
+												</div>
+
+												<div class="footer-section">
+														<h3 class="footer-title">Свежие записи</h3>
+														<ul class="footer-links">
+																<li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b9%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+														</ul>
+												</div>
+										</div>
+
+										<div class="copyright">
+												<p>&copy; 2025 Student IT Community Юманова Мария Андреевна.</p>
+										</div>
+								</div>
+								</footer>
+							</body>
+							</html>
