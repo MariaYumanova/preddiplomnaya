@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Бронирование мероприятия — Student IT Community</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styleH.css">
+    <link rel="stylesheet" href="/styleG.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="site-branding">
+                    <p class="site-title"><a href="/" rel="home">Student IT Community</a></p>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/news/">Новости</a></li>
+                        <li><a href="/shop/">Магазин</a></li>
+                        <li><a href="/a5213-contact/">Контакты</a></li>
+                        <li><a href="/%d0%be-%d1%81%d0%be%d0%be%d0%b1%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b5/">О сообществе</a></li>
+                        <li><a href="/my-account/">Мой аккаунт</a></li>
+                        <li><a href="/cart/">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="/">Главная</a> > Бронирование мероприятия
+        </div>
+
+        <header class="entry-header">
+            <h1 class="page-title">Бронирование мероприятия</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="entry-content">
+                <div id="booking-system">
+                    <h2>Система бронирования времени для мероприятий</h2>
+                    <p>Выберите удобную дату и время для участия в мероприятиях IT-сообщества.</p>
+
+                    <div class="calendar-grid" id="calendar"></div>
+
+                    <div id="booking-form" class="booking-form" style="display:none;">
+                        <h3>Вы бронируете: <span id="selected-slot"></span></h3>
+                        <p>Забронировано: <span id="current-booking-count">0</span>/<span id="max-booking-count">5</span> мест</p>
+                        <div id="booked-users"></div>
+                        <button id="confirm-booking" class="booking-button">Подтвердить бронь</button>
+                        <button id="cancel-booking" class="booking-button cancel" style="display:none;">Отменить бронь</button>
+                        <button id="close-form" class="booking-button" style="background: #95a5a6;">Закрыть</button>
+                    </div>
+
+                    <div id="booking-status"></div>
+                </div>
+            </div>
+
+            <!-- Боковая панель -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <form role="search" method="get" class="search-form" action="/">
+                        <label>
+                            <span class="screen-reader-text">Найти:</span>
+                            <input type="search" class="search-field" placeholder="Поиск…" value="" name="s">
+                        </label>
+                        <input type="submit" class="search-submit" value="Поиск">
+                    </form>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">Свежие записи</h3>
+                    <ul class="widget-list">
+                        <li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+                        <li><a href="/%d0%bd%d0%be%d0%b2%d0%b0%d1%8f-%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8%d1%8f-vr-ar-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%b0-%d0%b2-%d0%ba%d0%b0%d0%bc%d0%bf%d1%83%d1%81%d0%b5/">Новая лаборатория VR/AR открыта в кампусе</a></li>
+                        <li><a href="/%d0%be%d0%bf%d1%80%d0%be%d1%81-%d0%ba%d0%b0%d0%ba%d0%b8%d0%b5-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8-%d0%b2%d0%b0%d0%bc-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%b5%d1%81%d0%bd%d1%8b/" aria-current="page">Опрос: какие технологии вам интересны?</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">Архивы</h3>
+                    <ul class="widget-list">
+                        <li><a href="/2025/01/">Январь 2025</a></li>
+                        <li><a href="/2019/07/">Июль 2019</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">О нас!</h3>
+                    <ul class="footer-links">
+                        <li><a href="/a5213-contact/">Контакты</a></li>
+                        <li><a href="#">Версия сайта для слабовидящих</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Последние новости</h3>
+                    <ul class="footer-links">
+                        <li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+                        <li><a href="/%d0%bd%d0%be%d0%b2%d0%b0%d1%8f-%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8%d1%8f-vr-ar-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%b0-%d0%b2-%d0%ba%d0%b0%d0%bc%d0%bf%d1%83%d1%81%d0%b5/">Новая лаборатория VR/AR открыта в кампусе</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Свежие записи</h3>
+                    <ul class="footer-links">
+                        <li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 Student IT Community Юманова Мария Андреевна.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Конфигурация
+        const MAX_BOOKINGS_PER_SLOT = 5;
+
+        // Функция для получения куки
+        function getCookie(name) {
+            const value = '; ' + document.cookie;
+            const parts = value.split('; ' + name + '=');
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+        }
+
+        // Определение пользователя
+        function getCurrentUser() {
+            const userName = getCookie('user');
+
+            if (userName === 'admin1') {
+                return { id: 'admin1', name: 'Администратор', role: 'admin' };
+            } else if (userName === 'manager1') {
+                return { id: 'manager1', name: 'Менеджер', role: 'support' };
+            } else if (userName) {
+                return { id: 'user_' + userName, name: userName, role: 'user' };
+            }
+
+            // Гостевой аккаунт
+            return {
+                id: 'guest_' + Math.random().toString(36).slice(2, 11),
+                name: 'Гость',
+                role: 'guest'
+            };
+        }
+
+        // Основной класс системы бронирования мероприятий
+        class EventBookingSystem {
+            constructor() {
+                this.currentUser = getCurrentUser();
+                this.selectedDate = '';
+                this.selectedSlot = '';
+                this.bookingsData = {};
+                this.pollInterval = 5000; // Обновление каждые 5 секунд
+            }
+
+            async init() {
+                console.log('Система бронирования мероприятий для:', this.currentUser.name);
+                await this.loadBookings();
+                this.startPolling();
+                this.setupEventListeners();
+                this.showStatus('Система бронирования загружена', 'info');
+            }
+
+            async loadBookings() {
+                try {
+                    const response = await this.makeRequest('get_event_bookings');
+                    if (response.success) {
+                        this.bookingsData = response.bookings;
+                        this.renderCalendar();
+                    } else {
+                        this.showStatus('Ошибка загрузки данных: ' + response.error, 'error');
+                    }
+                } catch (error) {
+                    console.error('Ошибка загрузки бронирований:', error);
+                    this.showStatus('Ошибка соединения с сервером', 'error');
+                }
+            }
+
+            renderCalendar() {
+                const calendar = document.getElementById('calendar');
+                if (!calendar) return;
+
+                calendar.innerHTML = '';
+
+                // Генерируем даты на 7 дней вперед
+                const dates = this.generateDates();
+
+                dates.forEach(dateObj => {
+                    const dayColumn = document.createElement('div');
+                    dayColumn.className = 'day-column';
+
+                    // Заголовок дня
+                    const dayHeader = document.createElement('div');
+                    dayHeader.className = 'day-header';
+                    dayHeader.innerHTML = `
+                        <div>${dateObj.weekday}</div>
+                        <div>${dateObj.day} ${dateObj.month}</div>
+                    `;
+                    dayColumn.appendChild(dayHeader);
+
+                    // Временные слоты (с 10:00 до 20:00 с интервалом 2 часа)
+                    const timeSlots = ['10:00', '12:00', '14:00', '16:00', '18:00', '20:00'];
+
+                    timeSlots.forEach(time => {
+                        const slotElement = document.createElement('div');
+                        slotElement.className = 'time-slot';
+
+                        const dateKey = dateObj.dateKey;
+                        const bookings = this.getBookingsForSlot(dateKey, time);
+                        const userBooking = bookings.find(b => b.user_id === this.currentUser.id);
+                        const isBooked = bookings.length >= MAX_BOOKINGS_PER_SLOT;
+                        const availableSpots = MAX_BOOKINGS_PER_SLOT - bookings.length;
+
+                        // Определяем статус слота
+                        let status = 'available';
+                        let title = `Свободно (осталось ${availableSpots} мест)`;
+
+                        if (userBooking) {
+                            status = 'my-booking';
+                            title = 'Ваша бронь';
+                        } else if (isBooked) {
+                            status = 'booked';
+                            title = 'Мест нет';
+                        }
+
+                        slotElement.className = 'time-slot ' + status;
+                        slotElement.title = title;
+                        slotElement.innerHTML = time;
+
+                        // Добавляем счетчик броней
+                        if (bookings.length > 0) {
+                            const countBadge = document.createElement('div');
+                            countBadge.className = 'booking-count';
+                            countBadge.textContent = bookings.length;
+                            slotElement.appendChild(countBadge);
+                        }
+
+                        // Обработчик клика
+                        if (status !== 'booked') {
+                            slotElement.addEventListener('click', () => {
+                                this.handleSlotClick(dateKey, time, !!userBooking);
+                            });
+                        }
+
+                        dayColumn.appendChild(slotElement);
+                    });
+
+                    calendar.appendChild(dayColumn);
+                });
+            }
+
+            generateDates() {
+                const dates = [];
+                const today = new Date();
+
+                for (let i = 0; i < 7; i++) {
+                    const date = new Date(today);
+                    date.setDate(today.getDate() + i);
+
+                    dates.push({
+                        dateKey: date.toISOString().split('T')[0],
+                        weekday: date.toLocaleDateString('ru-RU', { weekday: 'short' }),
+                        day: date.getDate(),
+                        month: date.toLocaleDateString('ru-RU', { month: 'short' })
+                    });
+                }
+
+                return dates;
+            }
+
+            getBookingsForSlot(date, time) {
+                if (this.bookingsData[date] && this.bookingsData[date][time]) {
+                    return this.bookingsData[date][time];
+                }
+                return [];
+            }
+
+            handleSlotClick(date, time, isUserBooking) {
+                this.selectedDate = date;
+                this.selectedSlot = time;
+
+                const form = document.getElementById('booking-form');
+                form.style.display = 'block';
+
+                const dateObj = new Date(date);
+                const dateString = dateObj.toLocaleDateString('ru-RU', {
+                    day: 'numeric',
+                    month: 'long'
+                });
+
+                document.getElementById('selected-slot').textContent =
+                    `${dateString} в ${time}`;
+
+                const bookings = this.getBookingsForSlot(date, time);
+                const currentCount = bookings.length;
+
+                document.getElementById('current-booking-count').textContent = currentCount;
+                document.getElementById('max-booking-count').textContent = MAX_BOOKINGS_PER_SLOT;
+
+                // Показываем список участников
+                const bookedUsersEl = document.getElementById('booked-users');
+                if (bookings.length > 0) {
+                    bookedUsersEl.innerHTML = '<strong>Уже забронировали:</strong><br>' +
+                        bookings.map(b => `• ${b.user_name}`).join('<br>');
+                } else {
+                    bookedUsersEl.innerHTML = '<em>Пока никто не забронировал</em>';
+                }
+
+                // Настраиваем кнопки
+                document.getElementById('confirm-booking').style.display =
+                    isUserBooking ? 'none' : 'inline-block';
+                document.getElementById('cancel-booking').style.display =
+                    isUserBooking ? 'inline-block' : 'none';
+            }
+
+            async confirmBooking() {
+                if (!this.selectedDate || !this.selectedSlot) return;
+
+                try {
+                    const response = await this.makeRequest('book_event_slot', {
+                        date: this.selectedDate,
+                        slot: this.selectedSlot,
+                        user_id: this.currentUser.id,
+                        user_name: this.currentUser.name
+                    });
+
+                    if (response.success) {
+                        this.showStatus('Место успешно забронировано!', 'success');
+                        document.getElementById('booking-form').style.display = 'none';
+                        await this.loadBookings();
+                    } else {
+                        this.showStatus('Ошибка: ' + response.error, 'error');
+                    }
+                } catch (error) {
+                    this.showStatus('Ошибка соединения при бронировании', 'error');
+                }
+            }
+
+            async cancelBooking() {
+                if (!this.selectedDate || !this.selectedSlot) return;
+
+                try {
+                    const response = await this.makeRequest('cancel_event_booking', {
+                        date: this.selectedDate,
+                        slot: this.selectedSlot,
+                        user_id: this.currentUser.id
+                    });
+
+                    if (response.success) {
+                        this.showStatus('Бронь успешно отменена', 'success');
+                        document.getElementById('booking-form').style.display = 'none';
+                        await this.loadBookings();
+                    } else {
+                        this.showStatus('Ошибка: ' + response.error, 'error');
+                    }
+                } catch (error) {
+                    this.showStatus('Ошибка соединения при отмене', 'error');
+                }
+            }
+
+            async makeRequest(action, data = {}) {
+                const formData = new FormData();
+                formData.append('action', action);
+                formData.append('data', JSON.stringify(data));
+
+                const response = await fetch('event_booking_server.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('HTTP error: ' + response.status);
+                }
+
+                return await response.json();
+            }
+
+            startPolling() {
+                setInterval(async () => {
+                    await this.loadBookings();
+                }, this.pollInterval);
+            }
+
+            setupEventListeners() {
+                document.getElementById('confirm-booking').addEventListener('click', () => {
+                    this.confirmBooking();
+                });
+
+                document.getElementById('cancel-booking').addEventListener('click', () => {
+                    this.cancelBooking();
+                });
+
+                document.getElementById('close-form').addEventListener('click', () => {
+                    document.getElementById('booking-form').style.display = 'none';
+                });
+            }
+
+            showStatus(message, type) {
+                const statusEl = document.getElementById('booking-status');
+                statusEl.textContent = message;
+                statusEl.className = type + '-message';
+
+                setTimeout(() => {
+                    statusEl.textContent = '';
+                    statusEl.className = '';
+                }, 5000);
+            }
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            window.eventBookingSystem = new EventBookingSystem();
+            window.eventBookingSystem.init();
+        });
+    </script>
+</body>
+</html>

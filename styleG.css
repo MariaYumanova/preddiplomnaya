@@ -1,0 +1,514 @@
+/* Стили для секций контента на главной странице */
+.content-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #40B198;
+}
+
+.content-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.content-section h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.content-section p {
+    color: #6d7685;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.content-section ul {
+    color: #6d7685;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.content-section ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.content-section .button {
+    display: inline-block;
+    background: #40B198;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.content-section .button:hover {
+    background: #3BA38C;
+    color: white;
+}
+
+/* Стили для изображений в content-section */
+.content-section img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.content-section img.alignleft {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 50%;
+}
+
+.content-section img.alignright {
+    float: right;
+    margin: 0 0 20px 20px;
+    max-width: 50%;
+}
+
+.content-section img.aligncenter {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Стили для изображений с подписями */
+.content-section .wp-caption {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.content-section .wp-caption img {
+    margin: 0;
+}
+
+.content-section .wp-caption-text {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Адаптивность для content-section */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .content-section img.alignleft,
+    .content-section img.alignright {
+        float: none;
+        margin: 15px 0;
+        max-width: 100%;
+    }
+
+    .content-section .button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+
+#booking-system {
+            max-width: 100%;
+            margin: 20px auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .calendar-grid {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .day-column {
+            min-width: 150px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fafafa;
+        }
+
+        .day-header {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            color: #2c3e50;
+        }
+
+        .time-slot {
+            position: relative;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .available {
+            background: #e8f5e9;
+            border-color: #4caf50;
+        }
+
+        .available:hover {
+            background: #c8e6c9;
+            transform: translateY(-2px);
+        }
+
+        .booked {
+            background: #ffebee;
+            border-color: #f44336;
+            cursor: not-allowed;
+        }
+
+        .my-booking {
+            background: #e3f2fd;
+            border-color: #2196f3;
+            font-weight: bold;
+        }
+
+        .booking-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #2196F3;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .booking-form {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #3498db;
+            margin: 20px 0;
+        }
+
+        .booking-button {
+            background: #40B198;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+
+        .booking-button:hover {
+            background: #233452;
+        }
+
+        .booking-button.cancel {
+            background: #e74c3c;
+        }
+
+        .booking-button.cancel:hover {
+            background: #c0392b;
+        }
+
+        #booked-users {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        #booking-status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .success-message {
+            color: #155724;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error-message {
+            color: #721c24;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+
+        .info-message {
+            color: #0c5460;
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+        }
+
+
+        /* Стили чата */
+        #flask-chat-container {
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        #flask-chat-container h3 {
+            background: #2c3e50;
+            color: white;
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #chat-window {
+            height: 400px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #fafafa;
+        }
+
+        #chat-messages {
+            min-height: 100%;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            max-width: 80%;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .received {
+            background: white;
+            border: 1px solid #e0e0e0;
+            margin-right: auto;
+        }
+
+        .sent {
+            background: #40B198;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .system {
+            background: #f39c12;
+            color: white;
+            margin: 10px auto;
+            text-align: center;
+            max-width: 60%;
+            font-size: 0.9rem;
+        }
+
+        .support {
+            background: #3498db;
+            color: white;
+            border-left: 4px solid #2980b9;
+        }
+
+        .admin {
+            background: #e74c3c;
+            color: white;
+            border-left: 4px solid #c0392b;
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+        }
+
+        .message-sender {
+            font-weight: bold;
+        }
+
+        .message-time {
+            opacity: 0.7;
+            font-size: 0.75rem;
+        }
+
+        .message-text {
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+
+        #chat-controls {
+            display: flex;
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #ddd;
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #message-input:focus {
+            border-color: #40B198;
+        }
+
+        #send-btn {
+            background: #40B198;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #send-btn:hover {
+            background: #233452;
+        }
+
+        .online-users {
+            background: #ecf0f1;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .site-footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-title {
+            color: #3498db;
+            margin-top: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-field {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .search-submit {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .message {
+                max-width: 90%;
+            }
+
+            #chat-window {
+                height: 300px;
+            }
+
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }

@@ -1,0 +1,1829 @@
+2025-09-26 16:00:20 - Start
+2025-09-26 16:00:20 - Created messages file
+2025-09-26 16:00:20 - Input: 
+2025-09-26 16:00:20 - Action: get_messages
+2025-09-26 16:00:20 - Data: Array
+(
+)
+
+2025-09-26 16:00:20 - Sent 0 messages
+2025-09-26 16:00:20 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:23 - Start
+2025-09-26 16:00:23 - Input: 
+2025-09-26 16:00:23 - Action: get_new_messages
+2025-09-26 16:00:23 - Data: Array
+(
+    [last_id] => 0
+)
+
+2025-09-26 16:00:23 - New messages: 0
+2025-09-26 16:00:23 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:26 - Start
+2025-09-26 16:00:26 - Input: 
+2025-09-26 16:00:26 - Action: get_new_messages
+2025-09-26 16:00:26 - Data: Array
+(
+    [last_id] => 0
+)
+
+2025-09-26 16:00:26 - New messages: 0
+2025-09-26 16:00:26 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:27 - Start
+2025-09-26 16:00:27 - Input: 
+2025-09-26 16:00:27 - Action: send_message
+2025-09-26 16:00:27 - Data: Array
+(
+    [text] => fgnfgnfgn
+    [user_id] => guest_2lwzavljt
+    [user_name] => Гость
+    [user_role] => guest
+)
+
+2025-09-26 16:00:27 - Message saved: fgnfgnfgn
+2025-09-26 16:00:27 - Response sent: {"success":true,"message":{"id":1,"text":"fgnfgnfgn","user_id":"guest_2lwzavljt","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:00","timestamp":1758902427}}
+2025-09-26 16:00:29 - Start
+2025-09-26 16:00:29 - Input: 
+2025-09-26 16:00:29 - Action: get_new_messages
+2025-09-26 16:00:29 - Data: Array
+(
+    [last_id] => 1
+)
+
+2025-09-26 16:00:29 - New messages: 0
+2025-09-26 16:00:29 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:29 - Start
+2025-09-26 16:00:29 - Input: 
+2025-09-26 16:00:29 - Action: send_message
+2025-09-26 16:00:29 - Data: Array
+(
+    [text] => gnfgngn
+    [user_id] => guest_2lwzavljt
+    [user_name] => Гость
+    [user_role] => guest
+)
+
+2025-09-26 16:00:29 - Message saved: gnfgngn
+2025-09-26 16:00:29 - Response sent: {"success":true,"message":{"id":2,"text":"gnfgngn","user_id":"guest_2lwzavljt","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:00","timestamp":1758902429}}
+2025-09-26 16:00:32 - Start
+2025-09-26 16:00:32 - Input: 
+2025-09-26 16:00:32 - Action: get_new_messages
+2025-09-26 16:00:32 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:32 - New messages: 0
+2025-09-26 16:00:32 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:35 - Start
+2025-09-26 16:00:35 - Input: 
+2025-09-26 16:00:35 - Action: get_new_messages
+2025-09-26 16:00:35 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:35 - New messages: 0
+2025-09-26 16:00:35 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:38 - Start
+2025-09-26 16:00:38 - Input: 
+2025-09-26 16:00:38 - Action: get_new_messages
+2025-09-26 16:00:38 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:38 - New messages: 0
+2025-09-26 16:00:38 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:41 - Start
+2025-09-26 16:00:41 - Input: 
+2025-09-26 16:00:41 - Action: get_new_messages
+2025-09-26 16:00:41 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:41 - New messages: 0
+2025-09-26 16:00:41 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:44 - Start
+2025-09-26 16:00:44 - Input: 
+2025-09-26 16:00:44 - Action: get_new_messages
+2025-09-26 16:00:44 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:44 - New messages: 0
+2025-09-26 16:00:44 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:47 - Start
+2025-09-26 16:00:47 - Input: 
+2025-09-26 16:00:47 - Action: get_new_messages
+2025-09-26 16:00:47 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:47 - New messages: 0
+2025-09-26 16:00:47 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:50 - Start
+2025-09-26 16:00:50 - Input: 
+2025-09-26 16:00:50 - Action: get_new_messages
+2025-09-26 16:00:50 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:50 - New messages: 0
+2025-09-26 16:00:50 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:53 - Start
+2025-09-26 16:00:53 - Input: 
+2025-09-26 16:00:53 - Action: get_new_messages
+2025-09-26 16:00:53 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:53 - New messages: 0
+2025-09-26 16:00:53 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:56 - Start
+2025-09-26 16:00:56 - Input: 
+2025-09-26 16:00:56 - Action: get_new_messages
+2025-09-26 16:00:56 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:56 - New messages: 0
+2025-09-26 16:00:56 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:00:59 - Start
+2025-09-26 16:00:59 - Input: 
+2025-09-26 16:00:59 - Action: get_new_messages
+2025-09-26 16:00:59 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:00:59 - New messages: 0
+2025-09-26 16:00:59 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:00 - Start
+2025-09-26 16:01:00 - Input: 
+2025-09-26 16:01:00 - Action: get_messages
+2025-09-26 16:01:00 - Data: Array
+(
+)
+
+2025-09-26 16:01:00 - Sent 2 messages
+2025-09-26 16:01:00 - Response sent: {"success":true,"messages":[{"id":1,"text":"fgnfgnfgn","user_id":"guest_2lwzavljt","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:00","timestamp":1758902427},{"id":2,"text
+2025-09-26 16:01:02 - Start
+2025-09-26 16:01:02 - Input: 
+2025-09-26 16:01:02 - Action: get_new_messages
+2025-09-26 16:01:02 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:01:02 - New messages: 0
+2025-09-26 16:01:02 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:03 - Start
+2025-09-26 16:01:03 - Input: 
+2025-09-26 16:01:03 - Action: get_new_messages
+2025-09-26 16:01:03 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:01:03 - New messages: 0
+2025-09-26 16:01:03 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:05 - Start
+2025-09-26 16:01:05 - Input: 
+2025-09-26 16:01:05 - Action: get_new_messages
+2025-09-26 16:01:05 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:01:05 - New messages: 0
+2025-09-26 16:01:05 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:06 - Start
+2025-09-26 16:01:06 - Input: 
+2025-09-26 16:01:06 - Action: get_new_messages
+2025-09-26 16:01:06 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:01:06 - New messages: 0
+2025-09-26 16:01:06 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:08 - Start
+2025-09-26 16:01:08 - Input: 
+2025-09-26 16:01:08 - Action: get_new_messages
+2025-09-26 16:01:08 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:01:08 - New messages: 0
+2025-09-26 16:01:08 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:09 - Start
+2025-09-26 16:01:09 - Input: 
+2025-09-26 16:01:09 - Action: get_new_messages
+2025-09-26 16:01:09 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:01:09 - Start
+2025-09-26 16:01:09 - New messages: 0
+2025-09-26 16:01:09 - Input: 
+2025-09-26 16:01:09 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:09 - Action: send_message
+2025-09-26 16:01:09 - Data: Array
+(
+    [text] => добрый день
+    [user_id] => admin1
+    [user_name] => Администратор
+    [user_role] => admin
+)
+
+2025-09-26 16:01:09 - Message saved: добрый день
+2025-09-26 16:01:09 - Response sent: {"success":true,"message":{"id":3,"text":"\u0434\u043e\u0431\u0440\u044b\u0439 \u0434\u0435\u043d\u044c","user_id":"admin1","user_name":"\u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0
+2025-09-26 16:01:11 - Start
+2025-09-26 16:01:11 - Input: 
+2025-09-26 16:01:11 - Action: get_new_messages
+2025-09-26 16:01:11 - Data: Array
+(
+    [last_id] => 2
+)
+
+2025-09-26 16:01:11 - New messages: 1
+2025-09-26 16:01:11 - Response sent: {"success":true,"messages":[{"id":3,"text":"\u0434\u043e\u0431\u0440\u044b\u0439 \u0434\u0435\u043d\u044c","user_id":"admin1","user_name":"\u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\
+2025-09-26 16:01:12 - Start
+2025-09-26 16:01:12 - Input: 
+2025-09-26 16:01:12 - Action: get_new_messages
+2025-09-26 16:01:12 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:12 - New messages: 0
+2025-09-26 16:01:12 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:14 - Start
+2025-09-26 16:01:14 - Input: 
+2025-09-26 16:01:14 - Action: get_new_messages
+2025-09-26 16:01:14 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:14 - New messages: 0
+2025-09-26 16:01:14 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:15 - Start
+2025-09-26 16:01:15 - Input: 
+2025-09-26 16:01:15 - Action: get_new_messages
+2025-09-26 16:01:15 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:15 - New messages: 0
+2025-09-26 16:01:15 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:17 - Start
+2025-09-26 16:01:17 - Input: 
+2025-09-26 16:01:17 - Action: get_new_messages
+2025-09-26 16:01:17 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:17 - New messages: 0
+2025-09-26 16:01:17 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:18 - Start
+2025-09-26 16:01:18 - Input: 
+2025-09-26 16:01:18 - Action: get_new_messages
+2025-09-26 16:01:18 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:18 - New messages: 0
+2025-09-26 16:01:18 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:20 - Start
+2025-09-26 16:01:20 - Input: 
+2025-09-26 16:01:20 - Action: get_new_messages
+2025-09-26 16:01:20 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:20 - New messages: 0
+2025-09-26 16:01:20 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:21 - Start
+2025-09-26 16:01:21 - Input: 
+2025-09-26 16:01:21 - Action: get_new_messages
+2025-09-26 16:01:21 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:21 - New messages: 0
+2025-09-26 16:01:21 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:23 - Start
+2025-09-26 16:01:23 - Input: 
+2025-09-26 16:01:23 - Action: get_new_messages
+2025-09-26 16:01:23 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:23 - New messages: 0
+2025-09-26 16:01:23 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:24 - Start
+2025-09-26 16:01:24 - Input: 
+2025-09-26 16:01:24 - Action: get_new_messages
+2025-09-26 16:01:24 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:24 - New messages: 0
+2025-09-26 16:01:24 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:26 - Start
+2025-09-26 16:01:26 - Input: 
+2025-09-26 16:01:26 - Action: get_new_messages
+2025-09-26 16:01:26 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:26 - New messages: 0
+2025-09-26 16:01:26 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:27 - Start
+2025-09-26 16:01:27 - Input: 
+2025-09-26 16:01:27 - Action: get_new_messages
+2025-09-26 16:01:27 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:27 - New messages: 0
+2025-09-26 16:01:27 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:29 - Start
+2025-09-26 16:01:29 - Input: 
+2025-09-26 16:01:29 - Action: get_new_messages
+2025-09-26 16:01:29 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:29 - New messages: 0
+2025-09-26 16:01:29 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:30 - Start
+2025-09-26 16:01:30 - Input: 
+2025-09-26 16:01:30 - Action: get_new_messages
+2025-09-26 16:01:30 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:30 - New messages: 0
+2025-09-26 16:01:30 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:32 - Start
+2025-09-26 16:01:32 - Input: 
+2025-09-26 16:01:32 - Action: get_new_messages
+2025-09-26 16:01:32 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:32 - New messages: 0
+2025-09-26 16:01:32 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:33 - Start
+2025-09-26 16:01:33 - Input: 
+2025-09-26 16:01:33 - Action: get_new_messages
+2025-09-26 16:01:33 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:33 - New messages: 0
+2025-09-26 16:01:33 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:35 - Start
+2025-09-26 16:01:35 - Input: 
+2025-09-26 16:01:35 - Action: get_new_messages
+2025-09-26 16:01:35 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:35 - New messages: 0
+2025-09-26 16:01:35 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:36 - Start
+2025-09-26 16:01:36 - Input: 
+2025-09-26 16:01:36 - Action: get_new_messages
+2025-09-26 16:01:36 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:36 - New messages: 0
+2025-09-26 16:01:36 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:38 - Start
+2025-09-26 16:01:38 - Input: 
+2025-09-26 16:01:38 - Action: get_new_messages
+2025-09-26 16:01:38 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:38 - New messages: 0
+2025-09-26 16:01:38 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:39 - Start
+2025-09-26 16:01:39 - Input: 
+2025-09-26 16:01:39 - Action: get_new_messages
+2025-09-26 16:01:39 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:39 - New messages: 0
+2025-09-26 16:01:39 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:41 - Start
+2025-09-26 16:01:41 - Input: 
+2025-09-26 16:01:41 - Action: get_new_messages
+2025-09-26 16:01:41 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:41 - New messages: 0
+2025-09-26 16:01:41 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:42 - Start
+2025-09-26 16:01:42 - Input: 
+2025-09-26 16:01:42 - Action: get_new_messages
+2025-09-26 16:01:42 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:42 - New messages: 0
+2025-09-26 16:01:42 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:44 - Start
+2025-09-26 16:01:44 - Input: 
+2025-09-26 16:01:44 - Action: get_new_messages
+2025-09-26 16:01:44 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:44 - New messages: 0
+2025-09-26 16:01:44 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:45 - Start
+2025-09-26 16:01:45 - Input: 
+2025-09-26 16:01:45 - Action: get_new_messages
+2025-09-26 16:01:45 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:45 - New messages: 0
+2025-09-26 16:01:45 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:47 - Start
+2025-09-26 16:01:47 - Input: 
+2025-09-26 16:01:47 - Action: get_new_messages
+2025-09-26 16:01:47 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:47 - New messages: 0
+2025-09-26 16:01:47 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:48 - Start
+2025-09-26 16:01:48 - Input: 
+2025-09-26 16:01:48 - Action: get_new_messages
+2025-09-26 16:01:48 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:48 - New messages: 0
+2025-09-26 16:01:48 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:50 - Start
+2025-09-26 16:01:50 - Input: 
+2025-09-26 16:01:50 - Action: get_new_messages
+2025-09-26 16:01:50 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:50 - New messages: 0
+2025-09-26 16:01:50 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:51 - Start
+2025-09-26 16:01:51 - Input: 
+2025-09-26 16:01:51 - Action: get_new_messages
+2025-09-26 16:01:51 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:51 - New messages: 0
+2025-09-26 16:01:51 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:53 - Start
+2025-09-26 16:01:53 - Input: 
+2025-09-26 16:01:53 - Action: get_new_messages
+2025-09-26 16:01:53 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:53 - New messages: 0
+2025-09-26 16:01:53 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:54 - Start
+2025-09-26 16:01:54 - Input: 
+2025-09-26 16:01:54 - Action: get_new_messages
+2025-09-26 16:01:54 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:54 - New messages: 0
+2025-09-26 16:01:54 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:56 - Start
+2025-09-26 16:01:56 - Input: 
+2025-09-26 16:01:56 - Action: get_new_messages
+2025-09-26 16:01:56 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:56 - New messages: 0
+2025-09-26 16:01:56 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:57 - Start
+2025-09-26 16:01:57 - Input: 
+2025-09-26 16:01:57 - Action: get_new_messages
+2025-09-26 16:01:57 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:57 - New messages: 0
+2025-09-26 16:01:57 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:01:59 - Start
+2025-09-26 16:01:59 - Input: 
+2025-09-26 16:01:59 - Action: get_new_messages
+2025-09-26 16:01:59 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:01:59 - New messages: 0
+2025-09-26 16:01:59 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:00 - Start
+2025-09-26 16:02:00 - Input: 
+2025-09-26 16:02:00 - Action: get_new_messages
+2025-09-26 16:02:00 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:00 - New messages: 0
+2025-09-26 16:02:00 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:02 - Start
+2025-09-26 16:02:02 - Input: 
+2025-09-26 16:02:02 - Action: get_new_messages
+2025-09-26 16:02:02 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:02 - New messages: 0
+2025-09-26 16:02:02 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:03 - Start
+2025-09-26 16:02:03 - Input: 
+2025-09-26 16:02:03 - Action: get_new_messages
+2025-09-26 16:02:03 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:03 - New messages: 0
+2025-09-26 16:02:03 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:05 - Start
+2025-09-26 16:02:05 - Input: 
+2025-09-26 16:02:05 - Action: get_new_messages
+2025-09-26 16:02:05 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:05 - New messages: 0
+2025-09-26 16:02:05 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:06 - Start
+2025-09-26 16:02:06 - Input: 
+2025-09-26 16:02:06 - Action: get_new_messages
+2025-09-26 16:02:06 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:06 - New messages: 0
+2025-09-26 16:02:06 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:08 - Start
+2025-09-26 16:02:08 - Input: 
+2025-09-26 16:02:08 - Action: get_new_messages
+2025-09-26 16:02:08 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:08 - New messages: 0
+2025-09-26 16:02:08 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:09 - Start
+2025-09-26 16:02:09 - Input: 
+2025-09-26 16:02:09 - Action: get_new_messages
+2025-09-26 16:02:09 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:09 - New messages: 0
+2025-09-26 16:02:09 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:11 - Start
+2025-09-26 16:02:11 - Input: 
+2025-09-26 16:02:11 - Action: get_new_messages
+2025-09-26 16:02:11 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:11 - New messages: 0
+2025-09-26 16:02:11 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:14 - Start
+2025-09-26 16:02:14 - Input: 
+2025-09-26 16:02:14 - Action: get_new_messages
+2025-09-26 16:02:14 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:14 - New messages: 0
+2025-09-26 16:02:14 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:14 - Start
+2025-09-26 16:02:14 - Input: 
+2025-09-26 16:02:14 - Action: get_new_messages
+2025-09-26 16:02:14 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:14 - New messages: 0
+2025-09-26 16:02:14 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:17 - Start
+2025-09-26 16:02:17 - Input: 
+2025-09-26 16:02:17 - Action: get_new_messages
+2025-09-26 16:02:17 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:17 - New messages: 0
+2025-09-26 16:02:17 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:20 - Start
+2025-09-26 16:02:20 - Input: 
+2025-09-26 16:02:20 - Action: get_new_messages
+2025-09-26 16:02:20 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:20 - New messages: 0
+2025-09-26 16:02:20 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:22 - Start
+2025-09-26 16:02:22 - Input: 
+2025-09-26 16:02:22 - Action: get_messages
+2025-09-26 16:02:22 - Data: Array
+(
+)
+
+2025-09-26 16:02:22 - Sent 3 messages
+2025-09-26 16:02:22 - Response sent: {"success":true,"messages":[{"id":1,"text":"fgnfgnfgn","user_id":"guest_2lwzavljt","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:00","timestamp":1758902427},{"id":2,"text
+2025-09-26 16:02:25 - Start
+2025-09-26 16:02:25 - Input: 
+2025-09-26 16:02:25 - Action: get_new_messages
+2025-09-26 16:02:25 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:25 - New messages: 0
+2025-09-26 16:02:25 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:25 - Start
+2025-09-26 16:02:25 - Input: 
+2025-09-26 16:02:25 - Action: get_new_messages
+2025-09-26 16:02:25 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:25 - New messages: 0
+2025-09-26 16:02:25 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:26 - Start
+2025-09-26 16:02:26 - Input: 
+2025-09-26 16:02:26 - Action: get_messages
+2025-09-26 16:02:26 - Data: Array
+(
+)
+
+2025-09-26 16:02:26 - Sent 3 messages
+2025-09-26 16:02:26 - Response sent: {"success":true,"messages":[{"id":1,"text":"fgnfgnfgn","user_id":"guest_2lwzavljt","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:00","timestamp":1758902427},{"id":2,"text
+2025-09-26 16:02:28 - Start
+2025-09-26 16:02:28 - Input: 
+2025-09-26 16:02:28 - Action: get_new_messages
+2025-09-26 16:02:28 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:28 - New messages: 0
+2025-09-26 16:02:28 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:29 - Start
+2025-09-26 16:02:29 - Input: 
+2025-09-26 16:02:29 - Action: get_new_messages
+2025-09-26 16:02:29 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:29 - New messages: 0
+2025-09-26 16:02:29 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:32 - Start
+2025-09-26 16:02:32 - Input: 
+2025-09-26 16:02:32 - Action: get_new_messages
+2025-09-26 16:02:32 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:32 - New messages: 0
+2025-09-26 16:02:32 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:35 - Start
+2025-09-26 16:02:35 - Input: 
+2025-09-26 16:02:35 - Action: get_new_messages
+2025-09-26 16:02:35 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:35 - New messages: 0
+2025-09-26 16:02:35 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:38 - Start
+2025-09-26 16:02:38 - Input: 
+2025-09-26 16:02:38 - Action: get_new_messages
+2025-09-26 16:02:38 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:38 - New messages: 0
+2025-09-26 16:02:38 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:41 - Start
+2025-09-26 16:02:41 - Input: 
+2025-09-26 16:02:41 - Action: get_new_messages
+2025-09-26 16:02:41 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:41 - New messages: 0
+2025-09-26 16:02:41 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:43 - Start
+2025-09-26 16:02:43 - Input: 
+2025-09-26 16:02:43 - Action: get_messages
+2025-09-26 16:02:43 - Data: Array
+(
+)
+
+2025-09-26 16:02:43 - Sent 3 messages
+2025-09-26 16:02:43 - Response sent: {"success":true,"messages":[{"id":1,"text":"fgnfgnfgn","user_id":"guest_2lwzavljt","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:00","timestamp":1758902427},{"id":2,"text
+2025-09-26 16:02:44 - Start
+2025-09-26 16:02:44 - Input: 
+2025-09-26 16:02:44 - Action: get_new_messages
+2025-09-26 16:02:44 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:44 - New messages: 0
+2025-09-26 16:02:44 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:46 - Start
+2025-09-26 16:02:46 - Input: 
+2025-09-26 16:02:46 - Action: get_new_messages
+2025-09-26 16:02:46 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:46 - New messages: 0
+2025-09-26 16:02:46 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:47 - Start
+2025-09-26 16:02:47 - Input: 
+2025-09-26 16:02:47 - Action: get_new_messages
+2025-09-26 16:02:47 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:47 - New messages: 0
+2025-09-26 16:02:47 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:49 - Start
+2025-09-26 16:02:49 - Input: 
+2025-09-26 16:02:49 - Action: get_new_messages
+2025-09-26 16:02:49 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:49 - New messages: 0
+2025-09-26 16:02:49 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:50 - Start
+2025-09-26 16:02:50 - Input: 
+2025-09-26 16:02:50 - Action: get_new_messages
+2025-09-26 16:02:50 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:50 - New messages: 0
+2025-09-26 16:02:50 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:52 - Start
+2025-09-26 16:02:52 - Input: 
+2025-09-26 16:02:52 - Action: get_new_messages
+2025-09-26 16:02:52 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:52 - New messages: 0
+2025-09-26 16:02:52 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:53 - Start
+2025-09-26 16:02:53 - Input: 
+2025-09-26 16:02:53 - Action: get_new_messages
+2025-09-26 16:02:53 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:53 - New messages: 0
+2025-09-26 16:02:53 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:55 - Start
+2025-09-26 16:02:55 - Input: 
+2025-09-26 16:02:55 - Action: get_new_messages
+2025-09-26 16:02:55 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:55 - New messages: 0
+2025-09-26 16:02:55 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:56 - Start
+2025-09-26 16:02:56 - Input: 
+2025-09-26 16:02:56 - Action: get_new_messages
+2025-09-26 16:02:56 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:56 - New messages: 0
+2025-09-26 16:02:56 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:58 - Start
+2025-09-26 16:02:58 - Input: 
+2025-09-26 16:02:58 - Action: get_new_messages
+2025-09-26 16:02:58 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:58 - New messages: 0
+2025-09-26 16:02:58 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:02:59 - Start
+2025-09-26 16:02:59 - Input: 
+2025-09-26 16:02:59 - Action: get_new_messages
+2025-09-26 16:02:59 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:02:59 - New messages: 0
+2025-09-26 16:02:59 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:01 - Start
+2025-09-26 16:03:01 - Input: 
+2025-09-26 16:03:01 - Action: get_new_messages
+2025-09-26 16:03:01 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:01 - New messages: 0
+2025-09-26 16:03:01 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:02 - Start
+2025-09-26 16:03:02 - Input: 
+2025-09-26 16:03:02 - Action: get_new_messages
+2025-09-26 16:03:02 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:02 - New messages: 0
+2025-09-26 16:03:02 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:04 - Start
+2025-09-26 16:03:04 - Input: 
+2025-09-26 16:03:04 - Action: get_new_messages
+2025-09-26 16:03:04 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:04 - New messages: 0
+2025-09-26 16:03:04 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:05 - Start
+2025-09-26 16:03:05 - Input: 
+2025-09-26 16:03:05 - Action: get_new_messages
+2025-09-26 16:03:05 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:05 - New messages: 0
+2025-09-26 16:03:05 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:07 - Start
+2025-09-26 16:03:07 - Input: 
+2025-09-26 16:03:07 - Action: get_new_messages
+2025-09-26 16:03:07 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:07 - New messages: 0
+2025-09-26 16:03:07 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:08 - Start
+2025-09-26 16:03:08 - Input: 
+2025-09-26 16:03:08 - Action: get_new_messages
+2025-09-26 16:03:08 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:08 - New messages: 0
+2025-09-26 16:03:08 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:10 - Start
+2025-09-26 16:03:10 - Input: 
+2025-09-26 16:03:10 - Action: get_new_messages
+2025-09-26 16:03:10 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:10 - New messages: 0
+2025-09-26 16:03:10 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:11 - Start
+2025-09-26 16:03:11 - Input: 
+2025-09-26 16:03:11 - Action: get_new_messages
+2025-09-26 16:03:11 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:11 - New messages: 0
+2025-09-26 16:03:11 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:13 - Start
+2025-09-26 16:03:13 - Input: 
+2025-09-26 16:03:13 - Action: get_new_messages
+2025-09-26 16:03:13 - Data: Array
+(
+    [last_id] => 3
+)
+
+2025-09-26 16:03:13 - New messages: 0
+2025-09-26 16:03:13 - Response sent: {"success":true,"messages":[]}
+2025-09-26 16:03:14 - Chat request
+2025-09-26 16:03:14 - Input: 
+2025-09-26 16:03:14 - Action: get_new_messages
+2025-09-26 16:03:14 - New messages: 0
+2025-09-26 16:03:14 - Response: {"success":true,"messages":[],"online_count":0}
+2025-09-26 16:03:16 - Chat request
+2025-09-26 16:03:16 - Input: 
+2025-09-26 16:03:16 - Action: get_messages
+2025-09-26 16:03:16 - Sent 3 messages
+2025-09-26 16:03:16 - Response: {"success":true,"messages":[{"id":1,"text":"fgnfgnfgn","user_id":"guest_2lwzavljt","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:00","timestamp":1758902427},{"id":2,"text
+2025-09-26 16:03:17 - Chat request
+2025-09-26 16:03:17 - Input: 
+2025-09-26 16:03:17 - Action: get_new_messages
+2025-09-26 16:03:17 - New messages: 0
+2025-09-26 16:03:17 - Response: {"success":true,"messages":[],"online_count":0}
+2025-09-26 16:03:19 - Chat request
+2025-09-26 16:03:19 - Input: 
+2025-09-26 16:03:19 - Action: get_new_messages
+2025-09-26 16:03:19 - New messages: 0
+2025-09-26 16:03:19 - Response: {"success":true,"messages":[],"online_count":0}
+2025-09-26 16:03:19 - Chat request
+2025-09-26 16:03:19 - Input: 
+2025-09-26 16:03:19 - Action: send_message
+2025-09-26 16:03:19 - Message sent by Гость: fdbdfbdfb
+2025-09-26 16:03:19 - Response: {"success":true,"message":{"id":4,"text":"fdbdfbdfb","user_id":"guest_0na0plaue","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:03","timestamp":1758902599},"online_count":
+2025-09-26 16:03:20 - Chat request
+2025-09-26 16:03:20 - Input: 
+2025-09-26 16:03:20 - Action: get_new_messages
+2025-09-26 16:03:20 - New messages: 1
+2025-09-26 16:03:20 - Response: {"success":true,"messages":[{"id":4,"text":"fdbdfbdfb","user_id":"guest_0na0plaue","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:03","timestamp":1758902599}],"online_coun
+2025-09-26 16:03:21 - Chat request
+2025-09-26 16:03:21 - Input: 
+2025-09-26 16:03:21 - Action: send_message
+2025-09-26 16:03:21 - Message sent by Гость: fbdfbdfb
+2025-09-26 16:03:21 - Response: {"success":true,"message":{"id":5,"text":"fbdfbdfb","user_id":"guest_0na0plaue","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:03","timestamp":1758902601},"online_count":1
+2025-09-26 16:03:22 - Chat request
+2025-09-26 16:03:22 - Input: 
+2025-09-26 16:03:22 - Action: get_new_messages
+2025-09-26 16:03:22 - New messages: 0
+2025-09-26 16:03:22 - Response: {"success":true,"messages":[],"online_count":1}
+2025-09-26 16:03:23 - Chat request
+2025-09-26 16:03:23 - Input: 
+2025-09-26 16:03:23 - Action: get_new_messages
+2025-09-26 16:03:23 - New messages: 1
+2025-09-26 16:03:23 - Response: {"success":true,"messages":[{"id":5,"text":"fbdfbdfb","user_id":"guest_0na0plaue","user_name":"\u0413\u043e\u0441\u0442\u044c","user_role":"guest","time":"16:03","timestamp":1758902601}],"online_count
+2025-09-26 16:03:25 - Chat request
+2025-09-26 16:03:25 - Input: 
+2025-09-26 16:03:25 - Action: get_new_messages
+2025-09-26 16:03:25 - New messages: 0
+2025-09-26 16:03:25 - Response: {"success":true,"messages":[],"online_count":1}
+2025-09-26 16:03:26 - Chat request
+2025-09-26 16:03:26 - Input: 
+2025-09-26 16:03:26 - Action: get_new_messages
+2025-09-26 16:03:26 - New messages: 0
+2025-09-26 16:03:26 - Response: {"success":true,"messages":[],"online_count":1}
+2025-09-26 16:03:27 - Chat request
+2025-09-26 16:03:27 - Input: 
+2025-09-26 16:03:27 - Action: send_message
+2025-09-26 16:03:27 - Message sent by Администратор: fdbdfbdfb
+2025-09-26 16:03:27 - Response: {"success":true,"message":{"id":6,"text":"fdbdfbdfb","user_id":"admin1","user_name":"\u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440","user_role":"admin","time":"16:03",
+2025-09-26 16:03:28 - Chat request
+2025-09-26 16:03:28 - Input: 
+2025-09-26 16:03:28 - Action: get_new_messages
+2025-09-26 16:03:28 - New messages: 1
+2025-09-26 16:03:28 - Response: {"success":true,"messages":[{"id":6,"text":"fdbdfbdfb","user_id":"admin1","user_name":"\u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440","user_role":"admin","time":"16:03
+2025-09-26 16:03:29 - Chat request
+2025-09-26 16:03:29 - Input: 
+2025-09-26 16:03:29 - Action: get_new_messages
+2025-09-26 16:03:29 - New messages: 0
+2025-09-26 16:03:29 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:31 - Chat request
+2025-09-26 16:03:31 - Input: 
+2025-09-26 16:03:31 - Action: get_new_messages
+2025-09-26 16:03:31 - New messages: 0
+2025-09-26 16:03:31 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:32 - Chat request
+2025-09-26 16:03:32 - Input: 
+2025-09-26 16:03:32 - Action: get_new_messages
+2025-09-26 16:03:32 - New messages: 0
+2025-09-26 16:03:32 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:34 - Chat request
+2025-09-26 16:03:34 - Input: 
+2025-09-26 16:03:34 - Action: get_new_messages
+2025-09-26 16:03:34 - New messages: 0
+2025-09-26 16:03:34 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:35 - Chat request
+2025-09-26 16:03:35 - Input: 
+2025-09-26 16:03:35 - Action: get_new_messages
+2025-09-26 16:03:35 - New messages: 0
+2025-09-26 16:03:35 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:37 - Chat request
+2025-09-26 16:03:37 - Input: 
+2025-09-26 16:03:37 - Action: get_new_messages
+2025-09-26 16:03:37 - New messages: 0
+2025-09-26 16:03:37 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:38 - Chat request
+2025-09-26 16:03:38 - Input: 
+2025-09-26 16:03:38 - Action: get_new_messages
+2025-09-26 16:03:38 - New messages: 0
+2025-09-26 16:03:38 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:40 - Chat request
+2025-09-26 16:03:40 - Input: 
+2025-09-26 16:03:40 - Action: get_new_messages
+2025-09-26 16:03:40 - New messages: 0
+2025-09-26 16:03:40 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:41 - Chat request
+2025-09-26 16:03:41 - Input: 
+2025-09-26 16:03:41 - Action: get_new_messages
+2025-09-26 16:03:41 - New messages: 0
+2025-09-26 16:03:41 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:43 - Chat request
+2025-09-26 16:03:43 - Input: 
+2025-09-26 16:03:43 - Action: get_new_messages
+2025-09-26 16:03:43 - New messages: 0
+2025-09-26 16:03:43 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:44 - Chat request
+2025-09-26 16:03:44 - Input: 
+2025-09-26 16:03:44 - Action: get_new_messages
+2025-09-26 16:03:44 - New messages: 0
+2025-09-26 16:03:44 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:46 - Chat request
+2025-09-26 16:03:46 - Input: 
+2025-09-26 16:03:46 - Action: get_new_messages
+2025-09-26 16:03:46 - New messages: 0
+2025-09-26 16:03:46 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:47 - Chat request
+2025-09-26 16:03:47 - Input: 
+2025-09-26 16:03:47 - Action: get_new_messages
+2025-09-26 16:03:47 - New messages: 0
+2025-09-26 16:03:47 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:49 - Chat request
+2025-09-26 16:03:49 - Input: 
+2025-09-26 16:03:49 - Action: get_new_messages
+2025-09-26 16:03:49 - New messages: 0
+2025-09-26 16:03:49 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:50 - Chat request
+2025-09-26 16:03:50 - Input: 
+2025-09-26 16:03:50 - Action: get_new_messages
+2025-09-26 16:03:50 - New messages: 0
+2025-09-26 16:03:50 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:52 - Chat request
+2025-09-26 16:03:52 - Input: 
+2025-09-26 16:03:52 - Action: get_new_messages
+2025-09-26 16:03:52 - New messages: 0
+2025-09-26 16:03:52 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:53 - Chat request
+2025-09-26 16:03:53 - Input: 
+2025-09-26 16:03:53 - Action: get_new_messages
+2025-09-26 16:03:53 - New messages: 0
+2025-09-26 16:03:53 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:55 - Chat request
+2025-09-26 16:03:55 - Input: 
+2025-09-26 16:03:55 - Action: get_new_messages
+2025-09-26 16:03:55 - New messages: 0
+2025-09-26 16:03:55 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:56 - Chat request
+2025-09-26 16:03:56 - Input: 
+2025-09-26 16:03:56 - Action: get_new_messages
+2025-09-26 16:03:56 - New messages: 0
+2025-09-26 16:03:56 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:58 - Chat request
+2025-09-26 16:03:58 - Input: 
+2025-09-26 16:03:58 - Action: get_new_messages
+2025-09-26 16:03:58 - New messages: 0
+2025-09-26 16:03:58 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:03:59 - Chat request
+2025-09-26 16:03:59 - Input: 
+2025-09-26 16:03:59 - Action: get_new_messages
+2025-09-26 16:03:59 - New messages: 0
+2025-09-26 16:03:59 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:01 - Chat request
+2025-09-26 16:04:01 - Input: 
+2025-09-26 16:04:01 - Action: get_new_messages
+2025-09-26 16:04:01 - New messages: 0
+2025-09-26 16:04:01 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:02 - Chat request
+2025-09-26 16:04:02 - Input: 
+2025-09-26 16:04:02 - Action: get_new_messages
+2025-09-26 16:04:02 - New messages: 0
+2025-09-26 16:04:02 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:04 - Chat request
+2025-09-26 16:04:04 - Input: 
+2025-09-26 16:04:04 - Action: get_new_messages
+2025-09-26 16:04:04 - New messages: 0
+2025-09-26 16:04:04 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:05 - Chat request
+2025-09-26 16:04:05 - Input: 
+2025-09-26 16:04:05 - Action: get_new_messages
+2025-09-26 16:04:05 - New messages: 0
+2025-09-26 16:04:05 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:07 - Chat request
+2025-09-26 16:04:07 - Input: 
+2025-09-26 16:04:07 - Action: get_new_messages
+2025-09-26 16:04:07 - New messages: 0
+2025-09-26 16:04:07 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:08 - Chat request
+2025-09-26 16:04:08 - Input: 
+2025-09-26 16:04:08 - Action: get_new_messages
+2025-09-26 16:04:08 - New messages: 0
+2025-09-26 16:04:08 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:10 - Chat request
+2025-09-26 16:04:10 - Input: 
+2025-09-26 16:04:10 - Action: get_new_messages
+2025-09-26 16:04:10 - New messages: 0
+2025-09-26 16:04:10 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:11 - Chat request
+2025-09-26 16:04:11 - Input: 
+2025-09-26 16:04:11 - Action: get_new_messages
+2025-09-26 16:04:11 - New messages: 0
+2025-09-26 16:04:11 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:13 - Chat request
+2025-09-26 16:04:13 - Input: 
+2025-09-26 16:04:13 - Action: get_new_messages
+2025-09-26 16:04:13 - New messages: 0
+2025-09-26 16:04:13 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:14 - Chat request
+2025-09-26 16:04:14 - Input: 
+2025-09-26 16:04:14 - Action: get_new_messages
+2025-09-26 16:04:14 - New messages: 0
+2025-09-26 16:04:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:16 - Chat request
+2025-09-26 16:04:16 - Input: 
+2025-09-26 16:04:16 - Action: get_new_messages
+2025-09-26 16:04:16 - New messages: 0
+2025-09-26 16:04:16 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:17 - Chat request
+2025-09-26 16:04:17 - Input: 
+2025-09-26 16:04:17 - Action: get_new_messages
+2025-09-26 16:04:17 - New messages: 0
+2025-09-26 16:04:17 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:19 - Chat request
+2025-09-26 16:04:19 - Input: 
+2025-09-26 16:04:19 - Action: get_new_messages
+2025-09-26 16:04:19 - New messages: 0
+2025-09-26 16:04:19 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:20 - Chat request
+2025-09-26 16:04:20 - Input: 
+2025-09-26 16:04:20 - Action: get_new_messages
+2025-09-26 16:04:20 - New messages: 0
+2025-09-26 16:04:20 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:22 - Chat request
+2025-09-26 16:04:22 - Input: 
+2025-09-26 16:04:22 - Action: get_new_messages
+2025-09-26 16:04:22 - New messages: 0
+2025-09-26 16:04:22 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:23 - Chat request
+2025-09-26 16:04:23 - Input: 
+2025-09-26 16:04:23 - Action: get_new_messages
+2025-09-26 16:04:23 - New messages: 0
+2025-09-26 16:04:23 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:25 - Chat request
+2025-09-26 16:04:25 - Input: 
+2025-09-26 16:04:25 - Action: get_new_messages
+2025-09-26 16:04:25 - New messages: 0
+2025-09-26 16:04:25 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:26 - Chat request
+2025-09-26 16:04:26 - Input: 
+2025-09-26 16:04:26 - Action: get_new_messages
+2025-09-26 16:04:26 - New messages: 0
+2025-09-26 16:04:26 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:28 - Chat request
+2025-09-26 16:04:28 - Input: 
+2025-09-26 16:04:28 - Action: get_new_messages
+2025-09-26 16:04:28 - New messages: 0
+2025-09-26 16:04:28 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:29 - Chat request
+2025-09-26 16:04:29 - Input: 
+2025-09-26 16:04:29 - Action: get_new_messages
+2025-09-26 16:04:29 - New messages: 0
+2025-09-26 16:04:29 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:31 - Chat request
+2025-09-26 16:04:31 - Input: 
+2025-09-26 16:04:31 - Action: get_new_messages
+2025-09-26 16:04:31 - New messages: 0
+2025-09-26 16:04:31 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:32 - Chat request
+2025-09-26 16:04:32 - Input: 
+2025-09-26 16:04:32 - Action: get_new_messages
+2025-09-26 16:04:32 - New messages: 0
+2025-09-26 16:04:32 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:34 - Chat request
+2025-09-26 16:04:34 - Input: 
+2025-09-26 16:04:34 - Action: get_new_messages
+2025-09-26 16:04:34 - New messages: 0
+2025-09-26 16:04:34 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:37 - Chat request
+2025-09-26 16:04:37 - Input: 
+2025-09-26 16:04:37 - Action: get_new_messages
+2025-09-26 16:04:37 - New messages: 0
+2025-09-26 16:04:37 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:40 - Chat request
+2025-09-26 16:04:40 - Input: 
+2025-09-26 16:04:40 - Action: get_new_messages
+2025-09-26 16:04:40 - New messages: 0
+2025-09-26 16:04:40 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:43 - Chat request
+2025-09-26 16:04:43 - Input: 
+2025-09-26 16:04:43 - Action: get_new_messages
+2025-09-26 16:04:43 - New messages: 0
+2025-09-26 16:04:43 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:46 - Chat request
+2025-09-26 16:04:46 - Input: 
+2025-09-26 16:04:46 - Action: get_new_messages
+2025-09-26 16:04:46 - New messages: 0
+2025-09-26 16:04:46 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:49 - Chat request
+2025-09-26 16:04:49 - Input: 
+2025-09-26 16:04:49 - Action: get_new_messages
+2025-09-26 16:04:49 - New messages: 0
+2025-09-26 16:04:49 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:52 - Chat request
+2025-09-26 16:04:52 - Input: 
+2025-09-26 16:04:52 - Action: get_new_messages
+2025-09-26 16:04:52 - New messages: 0
+2025-09-26 16:04:52 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:55 - Chat request
+2025-09-26 16:04:55 - Input: 
+2025-09-26 16:04:55 - Action: get_new_messages
+2025-09-26 16:04:55 - New messages: 0
+2025-09-26 16:04:55 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:04:58 - Chat request
+2025-09-26 16:04:58 - Input: 
+2025-09-26 16:04:58 - Action: get_new_messages
+2025-09-26 16:04:58 - New messages: 0
+2025-09-26 16:04:58 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:01 - Chat request
+2025-09-26 16:05:01 - Input: 
+2025-09-26 16:05:01 - Action: get_new_messages
+2025-09-26 16:05:01 - New messages: 0
+2025-09-26 16:05:01 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:04 - Chat request
+2025-09-26 16:05:04 - Input: 
+2025-09-26 16:05:04 - Action: get_new_messages
+2025-09-26 16:05:04 - New messages: 0
+2025-09-26 16:05:04 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:07 - Chat request
+2025-09-26 16:05:07 - Input: 
+2025-09-26 16:05:07 - Action: get_new_messages
+2025-09-26 16:05:07 - New messages: 0
+2025-09-26 16:05:07 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:10 - Chat request
+2025-09-26 16:05:10 - Input: 
+2025-09-26 16:05:10 - Action: get_new_messages
+2025-09-26 16:05:10 - New messages: 0
+2025-09-26 16:05:10 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:13 - Chat request
+2025-09-26 16:05:13 - Input: 
+2025-09-26 16:05:13 - Action: get_new_messages
+2025-09-26 16:05:13 - New messages: 0
+2025-09-26 16:05:13 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:14 - Chat request
+2025-09-26 16:05:14 - Input: 
+2025-09-26 16:05:14 - Action: get_new_messages
+2025-09-26 16:05:14 - New messages: 0
+2025-09-26 16:05:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:16 - Chat request
+2025-09-26 16:05:16 - Input: 
+2025-09-26 16:05:16 - Action: get_new_messages
+2025-09-26 16:05:16 - New messages: 0
+2025-09-26 16:05:16 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:19 - Chat request
+2025-09-26 16:05:19 - Input: 
+2025-09-26 16:05:19 - Action: get_new_messages
+2025-09-26 16:05:19 - New messages: 0
+2025-09-26 16:05:19 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:22 - Chat request
+2025-09-26 16:05:22 - Input: 
+2025-09-26 16:05:22 - Action: get_new_messages
+2025-09-26 16:05:22 - New messages: 0
+2025-09-26 16:05:22 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:25 - Chat request
+2025-09-26 16:05:25 - Input: 
+2025-09-26 16:05:25 - Action: get_new_messages
+2025-09-26 16:05:25 - New messages: 0
+2025-09-26 16:05:25 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:28 - Chat request
+2025-09-26 16:05:28 - Input: 
+2025-09-26 16:05:28 - Action: get_new_messages
+2025-09-26 16:05:28 - New messages: 0
+2025-09-26 16:05:28 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:31 - Chat request
+2025-09-26 16:05:31 - Input: 
+2025-09-26 16:05:31 - Action: get_new_messages
+2025-09-26 16:05:31 - New messages: 0
+2025-09-26 16:05:31 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:34 - Chat request
+2025-09-26 16:05:34 - Input: 
+2025-09-26 16:05:34 - Action: get_new_messages
+2025-09-26 16:05:34 - New messages: 0
+2025-09-26 16:05:34 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:37 - Chat request
+2025-09-26 16:05:37 - Input: 
+2025-09-26 16:05:37 - Action: get_new_messages
+2025-09-26 16:05:37 - New messages: 0
+2025-09-26 16:05:37 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:40 - Chat request
+2025-09-26 16:05:40 - Input: 
+2025-09-26 16:05:40 - Action: get_new_messages
+2025-09-26 16:05:40 - New messages: 0
+2025-09-26 16:05:40 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:43 - Chat request
+2025-09-26 16:05:43 - Input: 
+2025-09-26 16:05:43 - Action: get_new_messages
+2025-09-26 16:05:43 - New messages: 0
+2025-09-26 16:05:43 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:46 - Chat request
+2025-09-26 16:05:46 - Input: 
+2025-09-26 16:05:46 - Action: get_new_messages
+2025-09-26 16:05:46 - New messages: 0
+2025-09-26 16:05:46 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:49 - Chat request
+2025-09-26 16:05:49 - Input: 
+2025-09-26 16:05:49 - Action: get_new_messages
+2025-09-26 16:05:49 - New messages: 0
+2025-09-26 16:05:49 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:52 - Chat request
+2025-09-26 16:05:52 - Input: 
+2025-09-26 16:05:52 - Action: get_new_messages
+2025-09-26 16:05:52 - New messages: 0
+2025-09-26 16:05:52 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:55 - Chat request
+2025-09-26 16:05:55 - Input: 
+2025-09-26 16:05:55 - Action: get_new_messages
+2025-09-26 16:05:55 - New messages: 0
+2025-09-26 16:05:55 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:05:58 - Chat request
+2025-09-26 16:05:58 - Input: 
+2025-09-26 16:05:58 - Action: get_new_messages
+2025-09-26 16:05:58 - New messages: 0
+2025-09-26 16:05:58 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:06:01 - Chat request
+2025-09-26 16:06:01 - Input: 
+2025-09-26 16:06:01 - Action: get_new_messages
+2025-09-26 16:06:01 - New messages: 0
+2025-09-26 16:06:01 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:06:04 - Chat request
+2025-09-26 16:06:04 - Input: 
+2025-09-26 16:06:04 - Action: get_new_messages
+2025-09-26 16:06:04 - New messages: 0
+2025-09-26 16:06:04 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:06:14 - Chat request
+2025-09-26 16:06:14 - Input: 
+2025-09-26 16:06:14 - Chat request
+2025-09-26 16:06:14 - Action: get_new_messages
+2025-09-26 16:06:14 - Input: 
+2025-09-26 16:06:14 - Action: get_new_messages
+2025-09-26 16:06:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:06:14 - New messages: 0
+2025-09-26 16:06:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:07:14 - Chat request
+2025-09-26 16:07:14 - Input: 
+2025-09-26 16:07:14 - Action: get_new_messages
+2025-09-26 16:07:14 - Chat request
+2025-09-26 16:07:14 - Input: 
+2025-09-26 16:07:14 - New messages: 0
+2025-09-26 16:07:14 - Action: get_new_messages
+2025-09-26 16:07:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:07:14 - New messages: 0
+2025-09-26 16:07:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:14 - Chat request
+2025-09-26 16:08:14 - Input: 
+2025-09-26 16:08:14 - Action: get_new_messages
+2025-09-26 16:08:14 - New messages: 0
+2025-09-26 16:08:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:14 - Chat request
+2025-09-26 16:08:14 - Input: 
+2025-09-26 16:08:14 - Action: get_new_messages
+2025-09-26 16:08:14 - New messages: 0
+2025-09-26 16:08:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:44 - Chat request
+2025-09-26 16:08:44 - Input: 
+2025-09-26 16:08:44 - Action: get_new_messages
+2025-09-26 16:08:44 - New messages: 0
+2025-09-26 16:08:44 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:45 - Chat request
+2025-09-26 16:08:45 - Input: 
+2025-09-26 16:08:45 - Action: get_new_messages
+2025-09-26 16:08:45 - New messages: 0
+2025-09-26 16:08:45 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:46 - Chat request
+2025-09-26 16:08:46 - Input: 
+2025-09-26 16:08:46 - Action: get_new_messages
+2025-09-26 16:08:46 - New messages: 0
+2025-09-26 16:08:46 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:47 - Chat request
+2025-09-26 16:08:47 - Input: 
+2025-09-26 16:08:47 - Action: get_new_messages
+2025-09-26 16:08:47 - New messages: 0
+2025-09-26 16:08:47 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:49 - Chat request
+2025-09-26 16:08:49 - Input: 
+2025-09-26 16:08:49 - Action: get_new_messages
+2025-09-26 16:08:49 - New messages: 0
+2025-09-26 16:08:49 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:50 - Chat request
+2025-09-26 16:08:50 - Input: 
+2025-09-26 16:08:50 - Action: get_new_messages
+2025-09-26 16:08:50 - New messages: 0
+2025-09-26 16:08:50 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:52 - Chat request
+2025-09-26 16:08:52 - Input: 
+2025-09-26 16:08:52 - Action: get_new_messages
+2025-09-26 16:08:52 - New messages: 0
+2025-09-26 16:08:52 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:53 - Chat request
+2025-09-26 16:08:53 - Input: 
+2025-09-26 16:08:53 - Action: get_new_messages
+2025-09-26 16:08:53 - New messages: 0
+2025-09-26 16:08:53 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:55 - Chat request
+2025-09-26 16:08:55 - Input: 
+2025-09-26 16:08:55 - Action: get_new_messages
+2025-09-26 16:08:55 - New messages: 0
+2025-09-26 16:08:55 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:08:58 - Chat request
+2025-09-26 16:08:58 - Input: 
+2025-09-26 16:08:58 - Action: get_new_messages
+2025-09-26 16:08:58 - New messages: 0
+2025-09-26 16:08:58 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:01 - Chat request
+2025-09-26 16:09:01 - Input: 
+2025-09-26 16:09:01 - Action: get_new_messages
+2025-09-26 16:09:01 - New messages: 0
+2025-09-26 16:09:01 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:04 - Chat request
+2025-09-26 16:09:04 - Input: 
+2025-09-26 16:09:04 - Action: get_new_messages
+2025-09-26 16:09:04 - New messages: 0
+2025-09-26 16:09:04 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:07 - Chat request
+2025-09-26 16:09:07 - Input: 
+2025-09-26 16:09:07 - Action: get_new_messages
+2025-09-26 16:09:07 - New messages: 0
+2025-09-26 16:09:07 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:10 - Chat request
+2025-09-26 16:09:10 - Input: 
+2025-09-26 16:09:10 - Action: get_new_messages
+2025-09-26 16:09:10 - New messages: 0
+2025-09-26 16:09:10 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:13 - Chat request
+2025-09-26 16:09:13 - Input: 
+2025-09-26 16:09:13 - Action: get_new_messages
+2025-09-26 16:09:13 - New messages: 0
+2025-09-26 16:09:13 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:16 - Chat request
+2025-09-26 16:09:16 - Input: 
+2025-09-26 16:09:16 - Action: get_new_messages
+2025-09-26 16:09:16 - New messages: 0
+2025-09-26 16:09:16 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:19 - Chat request
+2025-09-26 16:09:19 - Input: 
+2025-09-26 16:09:19 - Action: get_new_messages
+2025-09-26 16:09:19 - New messages: 0
+2025-09-26 16:09:19 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:22 - Chat request
+2025-09-26 16:09:22 - Input: 
+2025-09-26 16:09:22 - Action: get_new_messages
+2025-09-26 16:09:22 - New messages: 0
+2025-09-26 16:09:22 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:25 - Chat request
+2025-09-26 16:09:25 - Input: 
+2025-09-26 16:09:25 - Action: get_new_messages
+2025-09-26 16:09:25 - New messages: 0
+2025-09-26 16:09:25 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:28 - Chat request
+2025-09-26 16:09:28 - Input: 
+2025-09-26 16:09:28 - Action: get_new_messages
+2025-09-26 16:09:28 - New messages: 0
+2025-09-26 16:09:28 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:31 - Chat request
+2025-09-26 16:09:31 - Input: 
+2025-09-26 16:09:31 - Action: get_new_messages
+2025-09-26 16:09:31 - New messages: 0
+2025-09-26 16:09:31 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:34 - Chat request
+2025-09-26 16:09:34 - Input: 
+2025-09-26 16:09:34 - Action: get_new_messages
+2025-09-26 16:09:34 - New messages: 0
+2025-09-26 16:09:34 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:37 - Chat request
+2025-09-26 16:09:37 - Input: 
+2025-09-26 16:09:37 - Action: get_new_messages
+2025-09-26 16:09:37 - New messages: 0
+2025-09-26 16:09:37 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:40 - Chat request
+2025-09-26 16:09:40 - Input: 
+2025-09-26 16:09:40 - Action: get_new_messages
+2025-09-26 16:09:40 - New messages: 0
+2025-09-26 16:09:40 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:09:43 - Chat request
+2025-09-26 16:09:43 - Input: 
+2025-09-26 16:09:43 - Action: get_new_messages
+2025-09-26 16:09:43 - New messages: 0
+2025-09-26 16:09:43 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:10:14 - Chat request
+2025-09-26 16:10:14 - Input: 
+2025-09-26 16:10:14 - Action: get_new_messages
+2025-09-26 16:10:14 - New messages: 0
+2025-09-26 16:10:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:11:14 - Chat request
+2025-09-26 16:11:14 - Input: 
+2025-09-26 16:11:14 - Action: get_new_messages
+2025-09-26 16:11:14 - New messages: 0
+2025-09-26 16:11:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:12:14 - Chat request
+2025-09-26 16:12:14 - Input: 
+2025-09-26 16:12:14 - Action: get_new_messages
+2025-09-26 16:12:14 - New messages: 0
+2025-09-26 16:12:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:13:14 - Chat request
+2025-09-26 16:13:14 - Input: 
+2025-09-26 16:13:14 - Action: get_new_messages
+2025-09-26 16:13:14 - New messages: 0
+2025-09-26 16:13:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:14:14 - Chat request
+2025-09-26 16:14:14 - Input: 
+2025-09-26 16:14:14 - Action: get_new_messages
+2025-09-26 16:14:14 - New messages: 0
+2025-09-26 16:14:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:15:14 - Chat request
+2025-09-26 16:15:14 - Input: 
+2025-09-26 16:15:14 - Action: get_new_messages
+2025-09-26 16:15:14 - New messages: 0
+2025-09-26 16:15:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:16:14 - Chat request
+2025-09-26 16:16:14 - Input: 
+2025-09-26 16:16:14 - Action: get_new_messages
+2025-09-26 16:16:14 - New messages: 0
+2025-09-26 16:16:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:17:14 - Chat request
+2025-09-26 16:17:14 - Input: 
+2025-09-26 16:17:14 - Action: get_new_messages
+2025-09-26 16:17:14 - New messages: 0
+2025-09-26 16:17:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:18:14 - Chat request
+2025-09-26 16:18:14 - Input: 
+2025-09-26 16:18:14 - Action: get_new_messages
+2025-09-26 16:18:14 - New messages: 0
+2025-09-26 16:18:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:19:14 - Chat request
+2025-09-26 16:19:14 - Input: 
+2025-09-26 16:19:14 - Action: get_new_messages
+2025-09-26 16:19:14 - New messages: 0
+2025-09-26 16:19:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:20:14 - Chat request
+2025-09-26 16:20:14 - Input: 
+2025-09-26 16:20:14 - Action: get_new_messages
+2025-09-26 16:20:14 - New messages: 0
+2025-09-26 16:20:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:21:14 - Chat request
+2025-09-26 16:21:14 - Input: 
+2025-09-26 16:21:14 - Action: get_new_messages
+2025-09-26 16:21:14 - New messages: 0
+2025-09-26 16:21:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:22:14 - Chat request
+2025-09-26 16:22:14 - Input: 
+2025-09-26 16:22:14 - Action: get_new_messages
+2025-09-26 16:22:14 - New messages: 0
+2025-09-26 16:22:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:23:14 - Chat request
+2025-09-26 16:23:14 - Input: 
+2025-09-26 16:23:14 - Action: get_new_messages
+2025-09-26 16:23:14 - New messages: 0
+2025-09-26 16:23:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:24:14 - Chat request
+2025-09-26 16:24:14 - Input: 
+2025-09-26 16:24:14 - Action: get_new_messages
+2025-09-26 16:24:14 - New messages: 0
+2025-09-26 16:24:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:08 - Chat request
+2025-09-26 16:25:08 - Input: 
+2025-09-26 16:25:08 - Action: get_new_messages
+2025-09-26 16:25:08 - New messages: 0
+2025-09-26 16:25:08 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:10 - Chat request
+2025-09-26 16:25:10 - Input: 
+2025-09-26 16:25:10 - Action: get_new_messages
+2025-09-26 16:25:10 - New messages: 0
+2025-09-26 16:25:10 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:13 - Chat request
+2025-09-26 16:25:13 - Input: 
+2025-09-26 16:25:13 - Action: get_new_messages
+2025-09-26 16:25:13 - New messages: 0
+2025-09-26 16:25:13 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:16 - Chat request
+2025-09-26 16:25:16 - Input: 
+2025-09-26 16:25:16 - Action: get_new_messages
+2025-09-26 16:25:16 - New messages: 0
+2025-09-26 16:25:16 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:19 - Chat request
+2025-09-26 16:25:19 - Input: 
+2025-09-26 16:25:19 - Action: get_new_messages
+2025-09-26 16:25:19 - New messages: 0
+2025-09-26 16:25:19 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:22 - Chat request
+2025-09-26 16:25:22 - Input: 
+2025-09-26 16:25:22 - Action: get_new_messages
+2025-09-26 16:25:22 - New messages: 0
+2025-09-26 16:25:22 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:25 - Chat request
+2025-09-26 16:25:25 - Input: 
+2025-09-26 16:25:25 - Action: get_new_messages
+2025-09-26 16:25:25 - New messages: 0
+2025-09-26 16:25:25 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:28 - Chat request
+2025-09-26 16:25:28 - Input: 
+2025-09-26 16:25:28 - Action: get_new_messages
+2025-09-26 16:25:28 - New messages: 0
+2025-09-26 16:25:28 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:31 - Chat request
+2025-09-26 16:25:31 - Input: 
+2025-09-26 16:25:31 - Action: get_new_messages
+2025-09-26 16:25:31 - New messages: 0
+2025-09-26 16:25:31 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:34 - Chat request
+2025-09-26 16:25:34 - Input: 
+2025-09-26 16:25:34 - Action: get_new_messages
+2025-09-26 16:25:34 - New messages: 0
+2025-09-26 16:25:34 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:37 - Chat request
+2025-09-26 16:25:37 - Input: 
+2025-09-26 16:25:37 - Action: get_new_messages
+2025-09-26 16:25:37 - New messages: 0
+2025-09-26 16:25:37 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:40 - Chat request
+2025-09-26 16:25:40 - Input: 
+2025-09-26 16:25:40 - Action: get_new_messages
+2025-09-26 16:25:40 - New messages: 0
+2025-09-26 16:25:40 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:43 - Chat request
+2025-09-26 16:25:43 - Input: 
+2025-09-26 16:25:43 - Action: get_new_messages
+2025-09-26 16:25:43 - New messages: 0
+2025-09-26 16:25:43 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:46 - Chat request
+2025-09-26 16:25:46 - Input: 
+2025-09-26 16:25:46 - Action: get_new_messages
+2025-09-26 16:25:46 - New messages: 0
+2025-09-26 16:25:46 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:49 - Chat request
+2025-09-26 16:25:49 - Input: 
+2025-09-26 16:25:49 - Action: get_new_messages
+2025-09-26 16:25:49 - New messages: 0
+2025-09-26 16:25:49 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:52 - Chat request
+2025-09-26 16:25:52 - Input: 
+2025-09-26 16:25:52 - Action: get_new_messages
+2025-09-26 16:25:52 - New messages: 0
+2025-09-26 16:25:52 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:55 - Chat request
+2025-09-26 16:25:55 - Input: 
+2025-09-26 16:25:55 - Action: get_new_messages
+2025-09-26 16:25:55 - New messages: 0
+2025-09-26 16:25:55 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:25:58 - Chat request
+2025-09-26 16:25:58 - Input: 
+2025-09-26 16:25:58 - Action: get_new_messages
+2025-09-26 16:25:58 - New messages: 0
+2025-09-26 16:25:58 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:26:01 - Chat request
+2025-09-26 16:26:01 - Input: 
+2025-09-26 16:26:01 - Action: get_new_messages
+2025-09-26 16:26:01 - New messages: 0
+2025-09-26 16:26:01 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:26:04 - Chat request
+2025-09-26 16:26:04 - Input: 
+2025-09-26 16:26:04 - Action: get_new_messages
+2025-09-26 16:26:04 - New messages: 0
+2025-09-26 16:26:04 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:26:07 - Chat request
+2025-09-26 16:26:07 - Input: 
+2025-09-26 16:26:07 - Action: get_new_messages
+2025-09-26 16:26:07 - New messages: 0
+2025-09-26 16:26:07 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:26:14 - Chat request
+2025-09-26 16:26:14 - Input: 
+2025-09-26 16:26:14 - Action: get_new_messages
+2025-09-26 16:26:14 - New messages: 0
+2025-09-26 16:26:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:27:14 - Chat request
+2025-09-26 16:27:14 - Input: 
+2025-09-26 16:27:14 - Action: get_new_messages
+2025-09-26 16:27:14 - New messages: 0
+2025-09-26 16:27:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:28:14 - Chat request
+2025-09-26 16:28:14 - Input: 
+2025-09-26 16:28:14 - Action: get_new_messages
+2025-09-26 16:28:14 - New messages: 0
+2025-09-26 16:28:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:29:14 - Chat request
+2025-09-26 16:29:14 - Input: 
+2025-09-26 16:29:14 - Action: get_new_messages
+2025-09-26 16:29:14 - New messages: 0
+2025-09-26 16:29:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:30:14 - Chat request
+2025-09-26 16:30:14 - Input: 
+2025-09-26 16:30:14 - Action: get_new_messages
+2025-09-26 16:30:14 - New messages: 0
+2025-09-26 16:30:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:31:14 - Chat request
+2025-09-26 16:31:14 - Input: 
+2025-09-26 16:31:14 - Action: get_new_messages
+2025-09-26 16:31:14 - New messages: 0
+2025-09-26 16:31:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:32:14 - Chat request
+2025-09-26 16:32:14 - Input: 
+2025-09-26 16:32:14 - Action: get_new_messages
+2025-09-26 16:32:14 - New messages: 0
+2025-09-26 16:32:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:33:14 - Chat request
+2025-09-26 16:33:14 - Input: 
+2025-09-26 16:33:14 - Action: get_new_messages
+2025-09-26 16:33:14 - New messages: 0
+2025-09-26 16:33:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:34:14 - Chat request
+2025-09-26 16:34:14 - Input: 
+2025-09-26 16:34:14 - Action: get_new_messages
+2025-09-26 16:34:14 - New messages: 0
+2025-09-26 16:34:14 - Response: {"success":true,"messages":[],"online_count":2}
+2025-09-26 16:35:14 - Chat request
+2025-09-26 16:35:14 - Input: 
+2025-09-26 16:35:14 - Action: get_new_messages
+2025-09-26 16:35:14 - New messages: 0
+2025-09-26 16:35:14 - Response: {"success":true,"messages":[],"online_count":2}

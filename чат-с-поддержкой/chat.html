@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Чат с поддержкой — Student IT Community</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styleH.css">
+    <link rel="stylesheet" href="/styleG.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="site-branding">
+                    <p class="site-title"><a href="/" rel="home">Student IT Community</a></p>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/news/">Новости</a></li>
+                        <li><a href="/shop/">Магазин</a></li>
+                        <li><a href="/a5213-contact/">Контакты</a></li>
+                        <li><a href="/%d0%be-%d1%81%d0%be%d0%be%d0%b1%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b5/">О сообществе</a></li>
+                        <li><a href="/my-account/">Мой аккаунт</a></li>
+                        <li><a href="/cart/">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="/">Главная</a> > Чат с поддержкой
+        </div>
+
+        <header class="entry-header">
+            <h1 class="page-title">Чат с поддержкой</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="entry-content">
+                <p>Если у вас появились какие-либо вопросы мы всегда рады вам помочь и решить появившуюся у вас проблему.</p>
+
+                <div id="flask-chat-container">
+                    <h3>Чат сообщества IT Community</h3>
+                    <div class="online-users">
+                        <strong>Онлайн:</strong> <span id="online-count">1</span> пользователь(ей)
+                    </div>
+                    <div id="chat-window">
+                        <div id="chat-messages"></div>
+                    </div>
+                    <div id="chat-controls">
+                        <input type="text" id="message-input" placeholder="Напишите сообщение..." autocomplete="off">
+                        <button id="send-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            Отправить
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="widget">
+                    <form role="search" method="get" class="search-form" action="/">
+                        <label>
+                            <span class="screen-reader-text">Найти:</span>
+                            <input type="search" class="search-field" placeholder="Поиск…" value="" name="s">
+                        </label>
+                        <input type="submit" class="search-submit" value="Поиск">
+                    </form>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">Свежие записи</h3>
+                    <ul class="widget-list">
+                        <li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+                        <li><a href="/%d0%bd%d0%be%d0%b2%d0%b0%d1%8f-%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8%d1%8f-vr-ar-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%b0-%d0%b2-%d0%ba%d0%b0%d0%bc%d0%bf%d1%83%d1%81%d0%b5/">Новая лаборатория VR/AR открыта в кампусе</a></li>
+                        <li><a href="/%d0%be%d0%bf%d1%80%d0%be%d1%81-%d0%ba%d0%b0%d0%ba%d0%b8%d0%b5-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8-%d0%b2%d0%b0%d0%bc-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%b5%d1%81%d0%bd%d1%8b/" aria-current="page">Опрос: какие технологии вам интересны?</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">Архивы</h3>
+                    <ul class="widget-list">
+                        <li><a href="/2025/01/">Январь 2025</a></li>
+                        <li><a href="/2019/07/">Июль 2019</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">О нас!</h3>
+                    <ul class="footer-links">
+                        <li><a href="/a5213-contact/">Контакты</a></li>
+                        <li><a href="#">Версия сайта для слабовидящих</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Последние новости</h3>
+                    <ul class="footer-links">
+                        <li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+                        <li><a href="/%d0%bd%d0%be%d0%b2%d0%b0%d1%8f-%d0%bb%d0%b0%d0%b1%d0%be%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%b8%d1%8f-vr-ar-%d0%be%d1%82%d0%ba%d1%80%d1%8b%d1%82%d0%b0-%d0%b2-%d0%ba%d0%b0%d0%bc%d0%bf%d1%83%d1%81%d0%b5/">Новая лаборатория VR/AR открыта в кампусе</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Свежие записи</h3>
+                    <ul class="footer-links">
+                        <li><a href="/%d0%b8%d1%82%d0%be%d0%b3%d0%b8-%d1%87%d0%b5%d0%bc%d0%bf%d0%b8%d0%be%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d0%be-%d0%b0%d0%bb%d0%b3%d0%be%d1%80%d0%b8%d1%82%d0%bc%d0%b0%d0%bc-%d0%b2%d0%b8%d1%82%d1%82/">Итоги чемпионата по алгоритмам «Витте.Code»</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 Student IT Community Юманова Мария Андреевна.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Функция для получения куки
+        function getCookie(name) {
+            const value = '; ' + document.cookie;
+            const parts = value.split('; ' + name + '=');
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+        }
+
+        // Определение пользователя
+        function getCurrentUser() {
+            const userName = getCookie('user');
+
+            if (userName === 'admin1') {
+                return { id: 'admin1', name: 'Администратор', role: 'admin' };
+            } else if (userName === 'manager1') {
+                return { id: 'manager1', name: 'Менеджер поддержки', role: 'support' };
+            } else if (userName) {
+                return { id: 'user_' + userName, name: userName, role: 'user' };
+            }
+
+            // Гостевой аккаунт
+            return {
+                id: 'guest_' + Math.random().toString(36).slice(2, 11),
+                name: 'Гость',
+                role: 'guest'
+            };
+        }
+
+        // Основной класс чата
+        class CommunityChat {
+            constructor() {
+                this.currentUser = getCurrentUser();
+                this.lastMessageId = 0;
+                this.pollInterval = 3000; // Обновление каждые 3 секунды
+                this.isConnected = false;
+            }
+
+            async init() {
+                console.log('Чат инициализирован для:', this.currentUser.name);
+
+                // Загружаем историю сообщений
+                await this.loadMessageHistory();
+
+                // Запускаем периодическое обновление
+                this.startPolling();
+
+                // Настраиваем обработчики событий
+                this.setupEventListeners();
+
+                this.addSystemMessage(`Добро пожаловать в чат IT Community! Вы вошли как: ${this.currentUser.name}`);
+
+                // Симуляция приветственного сообщения от поддержки
+                setTimeout(() => {
+                    this.addSupportMessage();
+                }, 2000);
+            }
+
+            async loadMessageHistory() {
+                try {
+                    const response = await this.makeRequest('get_messages');
+                    if (response.success) {
+                        response.messages.forEach(msg => {
+                            this.displayMessage(msg);
+                        });
+                        this.scrollToBottom();
+
+                        // Запоминаем ID последнего сообщения
+                        if (response.messages.length > 0) {
+                            this.lastMessageId = Math.max(...response.messages.map(m => m.id || 0));
+                        }
+                    }
+                } catch (error) {
+                    console.error('Ошибка загрузки истории:', error);
+                    this.addSystemMessage('Ошибка загрузки истории сообщений');
+                }
+            }
+
+            async sendMessage(text) {
+                const messageText = text.trim();
+                if (!messageText) return;
+
+                try {
+                    const response = await this.makeRequest('send_message', {
+                        text: messageText,
+                        user_id: this.currentUser.id,
+                        user_name: this.currentUser.name,
+                        user_role: this.currentUser.role
+                    });
+
+                    if (response.success) {
+                        this.displayMessage(response.message);
+                        this.lastMessageId = response.message.id;
+
+                        // Симуляция ответа поддержки через случайное время
+                        if (this.currentUser.role === 'user' || this.currentUser.role === 'guest') {
+                            setTimeout(() => {
+                                this.addSupportMessage();
+                            }, 3000 + Math.random() * 7000);
+                        }
+                    } else {
+                        this.addSystemMessage('Ошибка отправки: ' + response.error);
+                    }
+                } catch (error) {
+                    console.error('Ошибка отправки:', error);
+                    this.addSystemMessage('Ошибка соединения при отправке сообщения');
+                }
+            }
+
+            async checkNewMessages() {
+                try {
+                    const response = await this.makeRequest('get_new_messages', {
+                        last_id: this.lastMessageId
+                    });
+
+                    if (response.success && response.messages.length > 0) {
+                        response.messages.forEach(msg => {
+                            // Не показываем свои же сообщения
+                            if (msg.user_id !== this.currentUser.id) {
+                                this.displayMessage(msg);
+                            }
+                            this.lastMessageId = Math.max(this.lastMessageId, msg.id || 0);
+                        });
+                        this.scrollToBottom();
+                    }
+
+                    // Обновляем счетчик онлайн
+                    this.updateOnlineCount(response.online_count || 1);
+
+                } catch (error) {
+                    console.error('Ошибка проверки новых сообщений:', error);
+                }
+            }
+
+            async makeRequest(action, data = {}) {
+                const formData = new FormData();
+                formData.append('action', action);
+                formData.append('data', JSON.stringify(data));
+
+                const response = await fetch('chat_server.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('HTTP error: ' + response.status);
+                }
+
+                return await response.json();
+            }
+
+            displayMessage(msg) {
+                const chat = document.getElementById('chat-messages');
+                if (!chat) return;
+
+                const div = document.createElement('div');
+
+                // Определяем тип сообщения
+                let messageType = 'received';
+                if (msg.user_id === this.currentUser.id) {
+                    messageType = 'sent';
+                } else if (msg.user_role === 'support' || msg.user_id === 'manager1') {
+                    messageType = 'support';
+                } else if (msg.user_role === 'admin' || msg.user_id === 'admin1') {
+                    messageType = 'admin';
+                }
+
+                div.className = `message ${messageType}`;
+                div.innerHTML = `
+                    <div class="message-header">
+                        <span class="message-sender">${this.escapeHtml(msg.user_name)}</span>
+                        <span class="message-time">${msg.time || ''}</span>
+                    </div>
+                    <div class="message-text">${this.escapeHtml(msg.text)}</div>
+                `;
+
+                chat.appendChild(div);
+                this.scrollToBottom();
+            }
+
+            addSystemMessage(text) {
+                const chat = document.getElementById('chat-messages');
+                if (!chat) return;
+
+                const div = document.createElement('div');
+                div.className = 'message system';
+                div.innerHTML = `<div class="message-text">${text}</div>`;
+                chat.appendChild(div);
+                this.scrollToBottom();
+            }
+
+            addSupportMessage() {
+                const supportMessages = [
+                    "Здравствуйте! Чем могу помочь?",
+                    "Спасибо за обращение! Расскажите подробнее о вашем вопросе.",
+                    "Понял ваш вопрос. Давайте разберемся вместе!",
+                    "По этому вопросу лучше проконсультироваться с техническим специалистом.",
+                    "Благодарим за обращение в поддержку IT Community!",
+                    "Спасибо за ваше сообщение! Мы работаем над улучшением сервиса.",
+                    "Похожий вопрос уже решался. Давайте я помогу вам с этим.",
+                    "Для решения этой проблемы нам понадобится дополнительная информация."
+                ];
+
+                const randomMessage = supportMessages[Math.floor(Math.random() * supportMessages.length)];
+
+                const message = {
+                    text: randomMessage,
+                    user_name: 'Поддержка IT Community',
+                    user_id: 'support',
+                    user_role: 'support',
+                    time: new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
+                };
+
+                this.displayMessage(message);
+            }
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            scrollToBottom() {
+                const chat = document.getElementById('chat-window');
+                if (chat) {
+                    chat.scrollTop = chat.scrollHeight;
+                }
+            }
+
+            updateOnlineCount(count) {
+                const onlineElement = document.getElementById('online-count');
+                if (onlineElement) {
+                    onlineElement.textContent = count;
+                }
+            }
+
+            startPolling() {
+                setInterval(() => {
+                    if (this.isConnected) {
+                        this.checkNewMessages();
+                    }
+                }, this.pollInterval);
+
+                this.isConnected = true;
+            }
+
+            setupEventListeners() {
+                const input = document.getElementById('message-input');
+                const btn = document.getElementById('send-btn');
+
+                if (!input || !btn) return;
+
+                const sendMessage = () => {
+                    this.sendMessage(input.value);
+                    input.value = '';
+                };
+
+                btn.addEventListener('click', sendMessage);
+                input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') sendMessage();
+                });
+
+                // Фокус на поле ввода
+                setTimeout(() => input.focus(), 1000);
+            }
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            window.communityChat = new CommunityChat();
+            window.communityChat.init();
+        });
+    </script>
+</body>
+</html>
