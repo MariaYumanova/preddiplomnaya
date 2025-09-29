@@ -228,7 +228,7 @@
 														<h3 class="footer-title">О нас!</h3>
 														<ul class="footer-links">
 																<li><a href="/a5213-contact/">Контакты</a></li>
-																<li><a href="#">Версия сайта для слабовидящих</a></li>
+															
 														</ul>
 												</div>
 
@@ -255,3 +255,4 @@
 								</footer>
 							</body>
 							</html>
+
